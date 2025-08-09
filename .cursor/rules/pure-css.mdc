@@ -1,0 +1,5 @@
+---
+description:  This project will only use pure css for all styling. at no point are we going to use another library or framework.
+globs:
+alwaysApply: false
+---
