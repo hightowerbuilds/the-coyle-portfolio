@@ -290,15 +290,6 @@ const seattleGarageArticles: Article[] = [
   }
 ]
 
-// Directory structure interface
-interface DirectoryStructure {
-  'coyle-portfolio': {
-    'padres-legends': Article[]
-    'snl-80s': Article[]
-    'central-district-music': Article[]
-  }
-}
-
 export function Catalog() {
   const [activeArticle, setActiveArticle] = useState<number>(0)
   const [sidebarWidth, setSidebarWidth] = useState<number>(33.333) // Initial width as percentage
@@ -336,15 +327,6 @@ export function Catalog() {
 
   // Combine all articles
   const allArticles = [...padresArticles, ...snlArticles, ...seattleGarageArticles]
-
-  // Create directory structure
-  const directoryStructure: DirectoryStructure = {
-    'coyle-portfolio': {
-      'padres-legends': padresArticles,
-      'snl-80s': snlArticles,
-      'central-district-music': seattleGarageArticles
-    }
-  }
 
   // Get current article info for path display
   const getCurrentArticleInfo = (articleIndex: number) => {
