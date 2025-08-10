@@ -29,7 +29,7 @@ export function Contact() {
             </div>
             <div className="contact-item">
               <strong>Location:</strong>
-              <span>Portland, Oregon</span>
+              <span>Sacramento, CA</span>
             </div>
             
             <div className="social-links">

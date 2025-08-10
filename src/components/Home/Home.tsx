@@ -40,7 +40,7 @@ export function Home() {
             publications, and I've helped dozens of brands tell their stories effectively.
           </p>
           <p>
-            When I'm not writing, you can find me exploring the beautiful landscapes of Oregon, 
+            When I'm not writing, you can find me exploring the beautiful landscapes of California, 
             reading the latest novels, or experimenting with new coffee brewing methods.
           </p>
         </div>

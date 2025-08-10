@@ -13,6 +13,9 @@ export function Layout() {
             <Link to="/" className="nav-link">
               Home
             </Link>
+            <Link to="/catalog" className="nav-link">
+              Catalog
+            </Link>
             <Link to="/contact" className="nav-link">
               Contact
             </Link>
