@@ -15,16 +15,20 @@ export function Home() {
             </p>
             <div className="hero-stats">
               <div className="stat">
-                <span className="stat-number">150+</span>
+                <span className="stat-number">420+</span>
                 <span className="stat-label">Articles Published</span>
               </div>
               <div className="stat">
-                <span className="stat-number">5+</span>
+                <span className="stat-number">3</span>
+                <span className="stat-label">Books Published</span>
+              </div>
+              <div className="stat">
+                <span className="stat-number">10+</span>
                 <span className="stat-label">Years Experience</span>
               </div>
               <div className="stat">
-                <span className="stat-number">50+</span>
-                <span className="stat-label">Happy Clients</span>
+                <span className="stat-number">1,000+</span>
+                <span className="stat-label">Happy Readers</span>
               </div>
             </div>
           </div>

@@ -7,7 +7,7 @@ export function Layout() {
       <nav className="navbar">
         <div className="nav-container">
           <Link to="/" className="nav-logo">
-            Chris Coyle
+            Chris Coyle -- Author, Editor, Journalist
           </Link>
           <div className="nav-links">
             <Link to="/" className="nav-link">

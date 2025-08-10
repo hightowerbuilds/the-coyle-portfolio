@@ -12,16 +12,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 1rem 20px 1rem 20px;
+  max-width: none;
+  margin: 0;
 }
 
 .nav-logo {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: #f5f5dc !important;
-  font-family: 'Doto', 'Courier New', Courier, monospace;
+  font-family: 'PT Mono', 'Courier New', monospace;
 }
 
 .nav-links {
