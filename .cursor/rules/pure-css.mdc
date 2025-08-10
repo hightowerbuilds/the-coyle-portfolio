@@ -1,5 +1,6 @@
 ---
-description:  This project will only use pure css for all styling. at no point are we going to use another library or framework for styling.
+description:  This project will only use pure css for all styling.
+    The only library we will use for styling is the drag and drop html api. Do not add other styling dependencies
 globs:
 alwaysApply: false
 ---

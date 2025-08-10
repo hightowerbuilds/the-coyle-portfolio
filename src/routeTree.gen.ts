@@ -9,10 +9,16 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as OtherWorksRouteImport } from './routes/other-works'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CatalogRouteImport } from './routes/catalog'
 import { Route as IndexRouteImport } from './routes/index'
 
+const OtherWorksRoute = OtherWorksRouteImport.update({
+  id: '/other-works',
+  path: '/other-works',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
@@ -33,34 +39,45 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/catalog': typeof CatalogRoute
   '/contact': typeof ContactRoute
+  '/other-works': typeof OtherWorksRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/catalog': typeof CatalogRoute
   '/contact': typeof ContactRoute
+  '/other-works': typeof OtherWorksRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/catalog': typeof CatalogRoute
   '/contact': typeof ContactRoute
+  '/other-works': typeof OtherWorksRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/catalog' | '/contact'
+  fullPaths: '/' | '/catalog' | '/contact' | '/other-works'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/catalog' | '/contact'
-  id: '__root__' | '/' | '/catalog' | '/contact'
+  to: '/' | '/catalog' | '/contact' | '/other-works'
+  id: '__root__' | '/' | '/catalog' | '/contact' | '/other-works'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CatalogRoute: typeof CatalogRoute
   ContactRoute: typeof ContactRoute
+  OtherWorksRoute: typeof OtherWorksRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/other-works': {
+      id: '/other-works'
+      path: '/other-works'
+      fullPath: '/other-works'
+      preLoaderRoute: typeof OtherWorksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
@@ -89,6 +106,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CatalogRoute: CatalogRoute,
   ContactRoute: ContactRoute,
+  OtherWorksRoute: OtherWorksRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

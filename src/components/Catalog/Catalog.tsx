@@ -301,6 +301,8 @@ interface DirectoryStructure {
 
 export function Catalog() {
   const [activeArticle, setActiveArticle] = useState<number>(0)
+  const [sidebarWidth, setSidebarWidth] = useState<number>(33.333) // Initial width as percentage
+  const [isDragging, setIsDragging] = useState<boolean>(false)
   const [expandedFolders, setExpandedFolders] = useState<{ [key: string]: boolean }>({
     'coyle-portfolio': true,
     'padres-legends': true,
@@ -409,13 +411,43 @@ export function Catalog() {
     }))
   }
 
+  // Drag handling for resizable partition
+  const handleMouseDown = (e: React.MouseEvent) => {
+    e.preventDefault()
+    setIsDragging(true)
+    
+    const handleMouseMove = (e: MouseEvent) => {
+      const container = document.querySelector('.directory-layout')
+      if (!container) return
+      
+      const containerRect = container.getBoundingClientRect()
+      const newWidth = ((e.clientX - containerRect.left) / containerRect.width) * 100
+      
+      // Constrain the width between 20% and 80%
+      const constrainedWidth = Math.min(Math.max(newWidth, 20), 80)
+      setSidebarWidth(constrainedWidth)
+    }
+
+    const handleMouseUp = () => {
+      setIsDragging(false)
+      document.removeEventListener('mousemove', handleMouseMove)
+      document.removeEventListener('mouseup', handleMouseUp)
+    }
+    
+    document.addEventListener('mousemove', handleMouseMove)
+    document.addEventListener('mouseup', handleMouseUp)
+  }
+
   const currentInfo = getCurrentArticleInfo(activeArticle)
 
   return (
     <div className="catalog-page">
-      <div className="directory-layout">
+      <div className={`directory-layout ${isDragging ? 'no-select' : ''}`}>
           {/* Left Sidebar - Directory Tree */}
-          <div className="directory-sidebar">
+          <div 
+            className="directory-sidebar"
+            style={{ width: `${sidebarWidth}%` }}
+          >
             <div className="directory-header">
               <span className="folder-icon">📁</span>
               <span className="folder-name">coyle-portfolio/</span>
@@ -593,8 +625,17 @@ export function Catalog() {
             </div>
           </div>
           
+          {/* Resize Handle */}
+          <div 
+            className={`resize-handle ${isDragging ? 'dragging' : ''}`}
+            onMouseDown={handleMouseDown}
+          ></div>
+          
           {/* Right Content Area */}
-          <div className="article-viewer">
+          <div 
+            className="article-viewer"
+            style={{ width: `${100 - sidebarWidth}%` }}
+          >
             <div className="article-header">
               <div className="file-path">
                 <span className="path-segment">{currentInfo.topLevel}</span>
