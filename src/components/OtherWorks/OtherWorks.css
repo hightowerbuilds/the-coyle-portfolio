@@ -13,7 +13,7 @@
 }
 
 .other-works-page h1 {
-  font-family: 'PT Mono', 'Courier New', monospace;
+  font-family: 'Tomorrow', sans-serif;
   font-size: 3rem;
   color: #f5f5dc;
   margin-bottom: 2rem;
@@ -42,7 +42,7 @@
 }
 
 .work-category h2 {
-  font-family: 'Doto', 'Courier New', Courier, monospace;
+  font-family: 'Tomorrow', sans-serif;
   font-size: 2rem;
   color: #f5f5dc;
   margin-bottom: 2rem;
@@ -65,14 +65,69 @@
   transition: all 0.3s ease;
 }
 
-.work-item:hover {
+.work-item.sir-coyler-band {
+  background-image: url('https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/scab-attack.jpg');
+  background-size: 140%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.work-item.sir-coyler-band:hover {
+  background-size: 100%;
+  background-image: url('https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/scab-attack.jpg');
+  background-color: transparent;
+}
+
+.work-item.sir-coyler-band::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.work-item.sir-coyler-band h3,
+.work-item.sir-coyler-band .work-meta {
+  position: relative;
+  z-index: 2;
+  color: #f5f5dc;
+}
+
+.work-item.clickable-item {
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+}
+
+.work-item.clickable-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255,255,255,0.15);
+}
+
+.work-item.clickable-item h3 {
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.work-item.clickable-item:hover h3 {
+  color: #f5f5dc;
+}
+
+.work-item:hover:not(.sir-coyler-band) {
   background: #2a2a2a;
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(255,255,255,0.1);
 }
 
 .work-item h3 {
-  font-family: 'Doto', 'Courier New', Courier, monospace;
+  font-family: 'Tomorrow', sans-serif;
   font-size: 1.4rem;
   color: #f5f5dc;
   margin-bottom: 0.5rem;

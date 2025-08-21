@@ -106,7 +106,7 @@
   padding: 1rem;
   border: 2px solid #333;
   border-radius: 8px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'PT Mono', monospace;
   font-size: 1rem;
   transition: border-color 0.3s ease;
   background: #000000;
@@ -130,7 +130,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   width: 100%;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'PT Mono', monospace;
 }
 
 .submit-btn:hover {

@@ -7,7 +7,11 @@ export function Layout() {
       <nav className="navbar">
         <div className="nav-container">
           <Link to="/" className="nav-logo">
-            Chris Coyle - Author, Editor, Journalist
+            <img 
+              src="https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/chriscoyletitle.png" 
+              alt="Chris Coyle - Author, Editor, Journalist"
+              className="nav-logo-image"
+            />
           </Link>
           <div className="nav-links">
             <Link to="/" className="nav-link">

@@ -13,11 +13,14 @@ export function OtherWorks() {
         <section className="work-category">
           <h2>Music and Bands</h2>
           <div className="work-items">
-            <div className="work-item">
-              <h3>Band Biography Writing</h3>
-              <p className="work-meta">Music Journalism • 2022-2024</p>
-              <p>Crafted compelling artist biographies and press releases for emerging indie bands and established acts across multiple genres.</p>
-            </div>
+            <a 
+              href="https://www.facebook.com/sircoylerandhisasthmaticband/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="work-item sir-coyler-band clickable-item"
+            >
+              <h3>Sir Coyler's Asthmatic Band</h3>
+            </a>
             <div className="work-item">
               <h3>Album Liner Notes</h3>
               <p className="work-meta">Music Writing • 2023</p>
