@@ -1,4 +1,5 @@
 import { Outlet, Link } from '@tanstack/react-router'
+import { Footer } from './Footer'
 import './Layout.css'
 
 export function Layout() {
@@ -7,11 +8,7 @@ export function Layout() {
       <nav className="navbar">
         <div className="nav-container">
           <Link to="/" className="nav-logo">
-            <img 
-              src="https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/chriscoyletitle.png" 
-              alt="Chris Coyle - Author, Editor, Journalist"
-              className="nav-logo-image"
-            />
+          Chris Coyle - Journalist, Author, Musician
           </Link>
           <div className="nav-links">
             <Link to="/" className="nav-link">
@@ -32,6 +29,7 @@ export function Layout() {
       <main className="main-content">
         <Outlet />
       </main>
+      <Footer />
     </>
   )
 }

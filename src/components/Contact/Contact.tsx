@@ -10,11 +10,12 @@ export function Contact() {
   return (
     <div className="contact-page">
       <div className="container">
-        <h1>Get in Touch</h1>
-        <p className="contact-intro">
-          I'd love to hear from you! Whether you're interested in collaborating on a project, 
-          discussing a writing opportunity, or just want to say hello, feel free to reach out.
-        </p>
+     
+    <br />
+    <br />
+    <br />
+    <br />
+   
         
         <div className="contact-content">
           <div className="contact-info">

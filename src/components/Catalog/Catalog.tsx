@@ -6,164 +6,81 @@ interface Article {
   title: string
   publication: string
   date: string
-  excerpt: string
   content: string
   category: string
+  pdfUrl?: string
 }
 
-const journalismArticles: Article[] = [
+const musicJournalismArticles: Article[] = [
   {
     id: 1,
-    title: "Journalism and News: Example 1",
+    title: "Music Journalism: Example 1",
     publication: "Sample Publication",
     date: "2024",
-    excerpt: "Example journalism piece",
-    content: "Sample content for journalism article",
-    category: "Journalism and News Events"
+    content: "Sample content for music journalism article",
+    category: "Music Journalism"
   },
   {
     id: 2,
-    title: "Journalism and News: Example 2",
+    title: "Music Journalism: Example 2",
     publication: "Sample Publication",
     date: "2024",
-    excerpt: "Example journalism piece",
-    content: "Sample content for journalism article",
-    category: "Journalism and News Events"
+    content: "Sample content for music journalism article",
+    category: "Music Journalism"
   },
   {
     id: 3,
-    title: "Journalism and News: Example 3",
+    title: "Music Journalism: Example 3",
     publication: "Sample Publication",
     date: "2024",
-    excerpt: "Example journalism piece",
-    content: "Sample content for journalism article",
-    category: "Journalism and News Events"
+    content: "Sample content for music journalism article",
+    category: "Music Journalism"
   },
   {
     id: 4,
-    title: "Journalism and News: Example 4",
+    title: "Music Journalism: Example 4",
     publication: "Sample Publication",
     date: "2024",
-    excerpt: "Example journalism piece",
-    content: "Sample content for journalism article",
-    category: "Journalism and News Events"
+    content: "Sample content for music journalism article",
+    category: "Music Journalism"
   }
 ]
 
-const interviewsArticles: Article[] = [
+const sportsJournalismArticles: Article[] = [
   {
     id: 11,
-    title: "Interviews and Biographies: Example 1",
-    publication: "Sample Publication",
+    title: "5 Former MLB Players Whose Nicknames Make No Sense At All",
+    publication: "CA Coyle",
     date: "2024",
-    excerpt: "Example interview piece",
-    content: "Sample content for interview article",
-    category: "Interviews and Biographies"
+    content: "An entertaining examination of former MLB players whose nicknames seem to have no logical connection to their playing style, personality, or background. This piece explores the curious origins of these monikers and what they reveal about baseball culture and the creative ways fans and teammates come up with player identities.",
+    category: "Sports Journalism",
+    pdfUrl: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/sign/pdfs/coyle-portfolio/CA%20Coyle%20-%205%20Former%20MLB%20Players%20Whose%20Nicknames%20Make%20No%20Sense%20At%20All.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81M2U0NjZkNi1jMDhjLTQzMDEtYjYxMy01OTU4NGMyMGM0NTkiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwZGZzL2NveWxlLXBvcnRmb2xpby9DQSBDb3lsZSAtIDUgRm9ybWVyIE1MQiBQbGF5ZXJzIFdob3NlIE5pY2tuYW1lcyBNYWtlIE5vIFNlbnNlIEF0IEFsbC5wZGYiLCJpYXQiOjE3NTYwOTIxOTYsImV4cCI6MjA3MTQ1MjE5Nn0.N5x5sWH2B-_5e_nB-tvAWE0Xb9FfSTZiZU5jJRpLFUI"
   },
   {
     id: 12,
-    title: "Interviews and Biographies: Example 2",
-    publication: "Sample Publication",
+    title: "5 Indications Slugerrr Is Sending The Wrong Message To Kids",
+    publication: "CA Coyle",
     date: "2024",
-    excerpt: "Example interview piece",
-    content: "Sample content for interview article",
-    category: "Interviews and Biographies"
+    content: "An analysis of how Slugerrr's messaging and content may be sending inappropriate signals to young audiences. This piece examines the potential negative impacts and suggests ways to address these concerns.",
+    category: "Sports Journalism",
+    pdfUrl: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/sign/pdfs/coyle-portfolio/CA%20Coyle%20-%205%20Indications%20Slugerrr%20Is%20Sending%20The%20Wrong%20Message%20To%20Kids.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81M2U0NjZkNi1jMDhjLTQzMDEtYjYxMy01OTU4NGMyMGM0NTkiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwZGZzL2NveWxlLXBvcnRmb2xpby9DQSBDb3lsZSAtIDUgSW5kaWNhdGlvbnMgU2x1Z2VycnIgSXMgU2VuZGluZyBUaGUgV3JvbmcgTWVzc2FnZSBUbyBLaWRzLnBkZiIsImlhdCI6MTc1NjA5NjU3MiwiZXhwIjoyMDcxNDU2NTcyfQ.paFFEZYePzZS2v-u3NJ5ySuXmKbbIx3qoZGm-b3_4Ac"
   },
   {
     id: 13,
-    title: "Interviews and Biographies: Example 3",
-    publication: "Sample Publication",
-    date: "2024",
-    excerpt: "Example interview piece",
-    content: "Sample content for interview article",
-    category: "Interviews and Biographies"
+    title: "5 NFL Players In The Race For MVP",
+    publication: "CA Coyle",
+    date: "2014",
+    content: "An analysis of the top 5 NFL punters competing for the unofficial Most Valuable Punter award. The article examines statistics like return yards allowed, punts inside the 20-yard line, net yardage, and total punt distance to determine which punter deserves the title.",
+    category: "Sports Journalism",
+    pdfUrl: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/sign/pdfs/coyle-portfolio/CA%20Coyle%20-%205%20NFL%20Players%20In%20The%20Race%20For%20MVP.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81M2U0NjZkNi1jMDhjLTQzMDEtYjYxMy01OTU4NGMyMGM0NTkiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwZGZzL2NveWxlLXBvcnRmb2xpby9DQSBDb3lsZSAtIDUgTkZMIFBsYXllcnMgSW4gVGhlIFJhY2UgRm9yIE1WUC5wZGYiLCJpYXQiOjE3NTYwOTY2MzUsImV4cCI6MjA3MTQ1NjYzNX0.erbFGoxWhtDiZnEGWUjGJwNnAmCeIzGtF2QZbnQ_jZ4"
   },
   {
     id: 14,
-    title: "Interviews and Biographies: Example 4",
+    title: "Sports Journalism: Example 4",
     publication: "Sample Publication",
     date: "2024",
-    excerpt: "Example interview piece",
-    content: "Sample content for interview article",
-    category: "Interviews and Biographies"
-  }
-]
-
-const essaysArticles: Article[] = [
-  {
-    id: 21,
-    title: "Essays: Example 1",
-    publication: "Sample Publication",
-    date: "2024",
-    excerpt: "Example essay piece",
-    content: "Sample content for essay article",
-    category: "Essays"
-  },
-  {
-    id: 22,
-    title: "Essays: Example 2",
-    publication: "Sample Publication",
-    date: "2024",
-    excerpt: "Example essay piece",
-    content: "Sample content for essay article",
-    category: "Essays"
-  },
-  {
-    id: 23,
-    title: "Essays: Example 3",
-    publication: "Sample Publication",
-    date: "2024",
-    excerpt: "Example essay piece",
-    content: "Sample content for essay article",
-    category: "Essays"
-  },
-  {
-    id: 24,
-    title: "Essays: Example 4",
-    publication: "Sample Publication",
-    date: "2024",
-    excerpt: "Example essay piece",
-    content: "Sample content for essay article",
-    category: "Essays"
-  }
-]
-
-const otherProjectsArticles: Article[] = [
-  {
-    id: 25,
-    title: "Other Large Projects: Example 1",
-    publication: "Sample Publication",
-    date: "2024",
-    excerpt: "Example large project",
-    content: "Sample content for large project",
-    category: "Other Large Projects"
-  },
-  {
-    id: 26,
-    title: "Other Large Projects: Example 2",
-    publication: "Sample Publication",
-    date: "2024",
-    excerpt: "Example large project",
-    content: "Sample content for large project",
-    category: "Other Large Projects"
-  },
-  {
-    id: 27,
-    title: "Other Large Projects: Example 3",
-    publication: "Sample Publication",
-    date: "2024",
-    excerpt: "Example large project",
-    content: "Sample content for large project",
-    category: "Other Large Projects"
-  },
-  {
-    id: 28,
-    title: "Other Large Projects: Example 4",
-    publication: "Sample Publication",
-    date: "2024",
-    excerpt: "Example large project",
-    content: "Sample content for large project",
-    category: "Other Large Projects"
+    content: "Sample content for sports journalism article",
+    category: "Sports Journalism"
   }
 ]
 
@@ -173,60 +90,38 @@ export function Catalog() {
   const [isDragging, setIsDragging] = useState<boolean>(false)
   const [expandedFolders, setExpandedFolders] = useState<{ [key: string]: boolean }>({
     'coyle-portfolio': true,
-    'journalism': true,
-    'interviews': false,
-    'essays': false,
-    'other-projects': false,
+    'music-journalism': true,
+    'sports-journalism': false,
   })
 
   // Combine all articles
-  const allArticles = [...journalismArticles, ...interviewsArticles, ...essaysArticles, ...otherProjectsArticles]
+  const allArticles = [...musicJournalismArticles, ...sportsJournalismArticles]
 
   // Get current article info for path display
   const getCurrentArticleInfo = (articleIndex: number) => {
     const article = allArticles[articleIndex]
-    if (journalismArticles.find(a => a.id === article.id)) {
+    if (musicJournalismArticles.find(a => a.id === article.id)) {
       return {
         topLevel: 'coyle-portfolio',
-        subDirectory: 'journalism',
-        article
-      }
-    } else if (interviewsArticles.find(a => a.id === article.id)) {
-      return {
-        topLevel: 'coyle-portfolio',
-        subDirectory: 'interviews',
-        article
-      }
-    } else if (essaysArticles.find(a => a.id === article.id)) {
-      return {
-        topLevel: 'coyle-portfolio',
-        subDirectory: 'essays',
+        subDirectory: 'music-journalism',
         article
       }
     } else {
       return {
         topLevel: 'coyle-portfolio',
-        subDirectory: 'other-projects',
+        subDirectory: 'sports-journalism',
         article
       }
     }
   }
 
   // Get articles with their original indices
-  const getJournalismArticles = () => {
-    return journalismArticles.map((article, index) => ({ ...article, originalIndex: index }))
+  const getMusicJournalismArticles = () => {
+    return musicJournalismArticles.map((article, index) => ({ ...article, originalIndex: index }))
   }
 
-  const getInterviewsArticles = () => {
-    return interviewsArticles.map((article, index) => ({ ...article, originalIndex: index + journalismArticles.length }))
-  }
-
-  const getEssaysArticles = () => {
-    return essaysArticles.map((article, index) => ({ ...article, originalIndex: index + journalismArticles.length + interviewsArticles.length }))
-  }
-
-  const getOtherProjectsArticles = () => {
-    return otherProjectsArticles.map((article, index) => ({ ...article, originalIndex: index + journalismArticles.length + interviewsArticles.length + essaysArticles.length }))
+  const getSportsJournalismArticles = () => {
+    return sportsJournalismArticles.map((article, index) => ({ ...article, originalIndex: index + musicJournalismArticles.length }))
   }
 
   const toggleFolder = (folderName: string) => {
@@ -295,23 +190,23 @@ export function Catalog() {
                 
                 {expandedFolders['coyle-portfolio'] && (
                   <div className="subdirectory-list">
-                    {/* Journalism and News Events Directory */}
+                    {/* Music Journalism Directory */}
                     <div className="folder-group nested">
                       <div 
                         className="folder-item sub-folder"
-                        onClick={() => toggleFolder('journalism')}
+                        onClick={() => toggleFolder('music-journalism')}
                       >
                         <span className="expand-icon">
-                          {expandedFolders['journalism'] ? '▼' : '▶'}
+                          {expandedFolders['music-journalism'] ? '▼' : '▶'}
                         </span>
                         <span className="folder-icon">📁</span>
-                        <span className="folder-name">journalism-and-news-events/</span>
-                        <span className="item-count">({journalismArticles.length})</span>
+                        <span className="folder-name">music-journalism/</span>
+                        <span className="item-count">({musicJournalismArticles.length})</span>
                       </div>
                       
-                      {expandedFolders['journalism'] && (
+                      {expandedFolders['music-journalism'] && (
                         <div className="file-list">
-                          {getJournalismArticles().map((article) => (
+                          {getMusicJournalismArticles().map((article) => (
                             <div
                               key={article.id}
                               className={`file-item ${activeArticle === article.originalIndex ? 'active' : ''}`}
@@ -327,87 +222,23 @@ export function Catalog() {
                       )}
                     </div>
 
-                    {/* Interviews and Biographies Directory */}
+                    {/* Sports Journalism Directory */}
                     <div className="folder-group nested">
                       <div 
                         className="folder-item sub-folder"
-                        onClick={() => toggleFolder('interviews')}
+                        onClick={() => toggleFolder('sports-journalism')}
                       >
                         <span className="expand-icon">
-                          {expandedFolders['interviews'] ? '▼' : '▶'}
+                          {expandedFolders['sports-journalism'] ? '▼' : '▶'}
                         </span>
                         <span className="folder-icon">📁</span>
-                        <span className="folder-name">interviews-and-biographies/</span>
-                        <span className="item-count">({interviewsArticles.length})</span>
+                        <span className="folder-name">sports-journalism/</span>
+                        <span className="item-count">({sportsJournalismArticles.length})</span>
                       </div>
                       
-                      {expandedFolders['interviews'] && (
+                      {expandedFolders['sports-journalism'] && (
                         <div className="file-list">
-                          {getInterviewsArticles().map((article) => (
-                            <div
-                              key={article.id}
-                              className={`file-item ${activeArticle === article.originalIndex ? 'active' : ''}`}
-                              onClick={() => setActiveArticle(article.originalIndex)}
-                            >
-                              <span className="file-icon">📄</span>
-                              <span className="file-name">
-                                {article.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.md
-                              </span>
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Essays Directory */}
-                    <div className="folder-group nested">
-                      <div 
-                        className="folder-item sub-folder"
-                        onClick={() => toggleFolder('essays')}
-                      >
-                        <span className="expand-icon">
-                          {expandedFolders['essays'] ? '▼' : '▶'}
-                        </span>
-                        <span className="folder-icon">📁</span>
-                        <span className="folder-name">essays/</span>
-                        <span className="item-count">({essaysArticles.length})</span>
-                      </div>
-                      
-                      {expandedFolders['essays'] && (
-                        <div className="file-list">
-                          {getEssaysArticles().map((article) => (
-                            <div
-                              key={article.id}
-                              className={`file-item ${activeArticle === article.originalIndex ? 'active' : ''}`}
-                              onClick={() => setActiveArticle(article.originalIndex)}
-                            >
-                              <span className="file-icon">📄</span>
-                              <span className="file-name">
-                                {article.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.md
-                              </span>
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Other Large Projects Directory */}
-                    <div className="folder-group nested">
-                      <div 
-                        className="folder-item sub-folder"
-                        onClick={() => toggleFolder('other-projects')}
-                      >
-                        <span className="expand-icon">
-                          {expandedFolders['other-projects'] ? '▼' : '▶'}
-                        </span>
-                        <span className="folder-icon">📁</span>
-                        <span className="folder-name">other-large-projects/</span>
-                        <span className="item-count">({otherProjectsArticles.length})</span>
-                      </div>
-                      
-                      {expandedFolders['other-projects'] && (
-                        <div className="file-list">
-                          {getOtherProjectsArticles().map((article) => (
+                          {getSportsJournalismArticles().map((article) => (
                             <div
                               key={article.id}
                               className={`file-item ${activeArticle === article.originalIndex ? 'active' : ''}`}
@@ -459,10 +290,26 @@ export function Catalog() {
             
             <div className="article-content">
               <h1>{currentInfo.article.title}</h1>
-              <p className="excerpt">{currentInfo.article.excerpt}</p>
-              <div className="article-body">
-                <p>{currentInfo.article.content}</p>
-              </div>
+              
+              {currentInfo.article.pdfUrl ? (
+                <div className="pdf-viewer">
+                  <iframe
+                    src={currentInfo.article.pdfUrl}
+                    width="100%"
+                    height="100%"
+                    style={{
+                      border: 'none',
+                      borderRadius: '4px',
+                      minHeight: 'calc(100vh - 250px)'
+                    }}
+                    title={currentInfo.article.title}
+                  />
+                </div>
+              ) : (
+                <div className="article-body">
+                  <p>{currentInfo.article.content}</p>
+                </div>
+              )}
             </div>
           </div>
         </div>

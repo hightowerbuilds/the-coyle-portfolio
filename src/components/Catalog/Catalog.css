@@ -367,6 +367,22 @@ body:has(.catalog-page) {
   text-align: justify;
 }
 
+/* PDF Viewer Styles */
+.pdf-viewer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.pdf-viewer iframe {
+  flex: 1;
+  background: #ffffff;
+}
+
 /* Scrollbar Styling */
 .directory-sidebar::-webkit-scrollbar,
 .article-content::-webkit-scrollbar {

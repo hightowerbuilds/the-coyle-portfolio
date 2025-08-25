@@ -13,7 +13,8 @@
 }
 
 .other-works-page h1 {
-  font-family: 'Tomorrow', sans-serif;
+  font-family: 'Courier', monospace;
+  font-weight: bold;
   font-size: 3rem;
   color: #f5f5dc;
   margin-bottom: 2rem;
@@ -42,7 +43,8 @@
 }
 
 .work-category h2 {
-  font-family: 'Tomorrow', sans-serif;
+  font-family: 'Courier', monospace;
+  font-weight: bold;
   font-size: 2rem;
   color: #f5f5dc;
   margin-bottom: 2rem;
@@ -73,6 +75,10 @@
   position: relative;
   transition: all 0.4s ease;
   overflow: hidden;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .work-item.sir-coyler-band:hover {
@@ -100,6 +106,119 @@
   color: #f5f5dc;
 }
 
+.work-item.album-liner-notes {
+  background-image: url('https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/squish-band.jpg');
+  background-size: 140%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.work-item.album-liner-notes:hover {
+  background-size: 100%;
+  background-image: url('https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/squish-band.jpg');
+  background-color: transparent;
+}
+
+.work-item.album-liner-notes::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.work-item.album-liner-notes h3,
+.work-item.album-liner-notes .work-meta {
+  position: relative;
+  z-index: 2;
+  color: #f5f5dc;
+}
+
+.work-item.estrus-cover,
+.work-item.estrus-mummies,
+.work-item.estrus-jump,
+.work-item.estrus-tim-kerr {
+  background-size: 140%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.work-item.estrus-cover {
+  background-image: url('https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/estrus-shovelin-shit-cover.jpg');
+}
+
+.work-item.estrus-mummies {
+  background-image: url('https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/the-mummies-article.png');
+}
+
+.work-item.estrus-jump {
+  background-image: url('https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/estrus-jump-page.jpg');
+}
+
+.work-item.estrus-tim-kerr {
+  background-image: url('https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/tim-kerr-estrus-book.jpg');
+}
+
+.work-item.estrus-cover:hover,
+.work-item.estrus-mummies:hover,
+.work-item.estrus-jump:hover,
+.work-item.estrus-tim-kerr:hover {
+  background-size: 100%;
+}
+
+.work-item.estrus-cover:hover {
+  background-image: url('https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/estrus-shovelin-shit-cover.jpg');
+}
+.work-item.estrus-mummies:hover {
+  background-image: url('https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/the-mummies-article.png');
+}
+.work-item.estrus-jump:hover {
+  background-image: url('https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/estrus-jump-page.jpg');
+}
+.work-item.estrus-tim-kerr:hover {
+  background-image: url('https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/tim-kerr-estrus-book.jpg');
+}
+
+.work-item.estrus-cover::before,
+.work-item.estrus-mummies::before,
+.work-item.estrus-jump::before,
+.work-item.estrus-tim-kerr::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.work-item.estrus-cover h3 {
+  position: relative;
+  z-index: 2;
+  color: #f5f5dc;
+  text-align: center;
+}
+
 .work-item.clickable-item {
   cursor: pointer;
   text-decoration: none;
@@ -120,14 +239,15 @@
   color: #f5f5dc;
 }
 
-.work-item:hover:not(.sir-coyler-band) {
+.work-item:hover:not(.sir-coyler-band):not(.album-liner-notes):not(.estrus-cover):not(.estrus-mummies):not(.estrus-jump):not(.estrus-tim-kerr) {
   background: #2a2a2a;
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(255,255,255,0.1);
 }
 
 .work-item h3 {
-  font-family: 'Tomorrow', sans-serif;
+  font-family: 'Courier', monospace;
+  font-weight: bold;
   font-size: 1.4rem;
   color: #f5f5dc;
   margin-bottom: 0.5rem;
