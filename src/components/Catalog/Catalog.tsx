@@ -11,44 +11,9 @@ interface Article {
   pdfUrl?: string
 }
 
-const musicJournalismArticles: Article[] = [
+const portfolioArticles: Article[] = [
   {
     id: 1,
-    title: "Music Journalism: Example 1",
-    publication: "Sample Publication",
-    date: "2024",
-    content: "Sample content for music journalism article",
-    category: "Music Journalism"
-  },
-  {
-    id: 2,
-    title: "Music Journalism: Example 2",
-    publication: "Sample Publication",
-    date: "2024",
-    content: "Sample content for music journalism article",
-    category: "Music Journalism"
-  },
-  {
-    id: 3,
-    title: "Music Journalism: Example 3",
-    publication: "Sample Publication",
-    date: "2024",
-    content: "Sample content for music journalism article",
-    category: "Music Journalism"
-  },
-  {
-    id: 4,
-    title: "Music Journalism: Example 4",
-    publication: "Sample Publication",
-    date: "2024",
-    content: "Sample content for music journalism article",
-    category: "Music Journalism"
-  }
-]
-
-const sportsJournalismArticles: Article[] = [
-  {
-    id: 11,
     title: "5 Former MLB Players Whose Nicknames Make No Sense At All",
     publication: "CA Coyle",
     date: "2024",
@@ -57,7 +22,7 @@ const sportsJournalismArticles: Article[] = [
     pdfUrl: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/sign/pdfs/coyle-portfolio/CA%20Coyle%20-%205%20Former%20MLB%20Players%20Whose%20Nicknames%20Make%20No%20Sense%20At%20All.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81M2U0NjZkNi1jMDhjLTQzMDEtYjYxMy01OTU4NGMyMGM0NTkiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwZGZzL2NveWxlLXBvcnRmb2xpby9DQSBDb3lsZSAtIDUgRm9ybWVyIE1MQiBQbGF5ZXJzIFdob3NlIE5pY2tuYW1lcyBNYWtlIE5vIFNlbnNlIEF0IEFsbC5wZGYiLCJpYXQiOjE3NTYwOTIxOTYsImV4cCI6MjA3MTQ1MjE5Nn0.N5x5sWH2B-_5e_nB-tvAWE0Xb9FfSTZiZU5jJRpLFUI"
   },
   {
-    id: 12,
+    id: 2,
     title: "5 Indications Slugerrr Is Sending The Wrong Message To Kids",
     publication: "CA Coyle",
     date: "2024",
@@ -66,7 +31,7 @@ const sportsJournalismArticles: Article[] = [
     pdfUrl: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/sign/pdfs/coyle-portfolio/CA%20Coyle%20-%205%20Indications%20Slugerrr%20Is%20Sending%20The%20Wrong%20Message%20To%20Kids.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81M2U0NjZkNi1jMDhjLTQzMDEtYjYxMy01OTU4NGMyMGM0NTkiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwZGZzL2NveWxlLXBvcnRmb2xpby9DQSBDb3lsZSAtIDUgSW5kaWNhdGlvbnMgU2x1Z2VycnIgSXMgU2VuZGluZyBUaGUgV3JvbmcgTWVzc2FnZSBUbyBLaWRzLnBkZiIsImlhdCI6MTc1NjA5NjU3MiwiZXhwIjoyMDcxNDU2NTcyfQ.paFFEZYePzZS2v-u3NJ5ySuXmKbbIx3qoZGm-b3_4Ac"
   },
   {
-    id: 13,
+    id: 3,
     title: "5 NFL Players In The Race For MVP",
     publication: "CA Coyle",
     date: "2014",
@@ -75,12 +40,58 @@ const sportsJournalismArticles: Article[] = [
     pdfUrl: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/sign/pdfs/coyle-portfolio/CA%20Coyle%20-%205%20NFL%20Players%20In%20The%20Race%20For%20MVP.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81M2U0NjZkNi1jMDhjLTQzMDEtYjYxMy01OTU4NGMyMGM0NTkiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwZGZzL2NveWxlLXBvcnRmb2xpby9DQSBDb3lsZSAtIDUgTkZMIFBsYXllcnMgSW4gVGhlIFJhY2UgRm9yIE1WUC5wZGYiLCJpYXQiOjE3NTYwOTY2MzUsImV4cCI6MjA3MTQ1NjYzNX0.erbFGoxWhtDiZnEGWUjGJwNnAmCeIzGtF2QZbnQ_jZ4"
   },
   {
-    id: 14,
-    title: "Sports Journalism: Example 4",
-    publication: "Sample Publication",
+    id: 4,
+    title: "5 Pro Athletes Who Share Names With Famous Rockers",
+    publication: "CA Coyle",
     date: "2024",
-    content: "Sample content for sports journalism article",
-    category: "Sports Journalism"
+    content: "An exploration of the amusing coincidences where professional athletes share names with famous rock musicians. This piece examines these name doppelgängers and the entertaining possibilities they present for sports and music fans alike.",
+    category: "Sports Journalism",
+    pdfUrl: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/sign/pdfs/coyle-portfolio/CA%20Coyle%20-%205%20Pro%20Athletes%20Who%20Share%20Names%20With%20Famous%20Rockers.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81M2U0NjZkNi1jMDhjLTQzMDEtYjYxMy01OTU4NGMyMGM0NTkiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwZGZzL2NveWxlLXBvcnRmb2xpby9DQSBDb3lsZSAtIDUgUHJvIEF0aGxldGVzIFdobyBTaGFyZSBOYW1lcyBXaXRoIEZhbW91cyBSb2NrZXJzLnBkZiIsImlhdCI6MTc1NjE4NTIxNiwiZXhwIjoyMDcxNTQ1MjE2fQ.sDN7RjzXlaKD9bBEMfoLZo-SAwkQaG0G8-i6eARXv6A"
+  },
+  {
+    id: 5,
+    title: "5 Reasons The Oakland Raiders Should Trade The No. 4 Pick For Tom Brady",
+    publication: "CA Coyle",
+    date: "2015",
+    content: "An analysis of why the Oakland Raiders should consider trading their number four overall pick in the NFL Draft for New England Patriots quarterback Tom Brady. The article explores the potential benefits of bringing the hometown hero and proven winner to Oakland to help revitalize the struggling franchise.",
+    category: "Sports Journalism",
+    pdfUrl: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/sign/pdfs/coyle-portfolio/CA%20Coyle%20-%205%20Reasons%20The%20Oakland%20Raiders%20Should%20Trade%20The%20No.%204%20Pick%20For%20Tom%20Brady.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81M2U0NjZkNi1jMDhjLTQzMDEtYjYxMy01OTU4NGMyMGM0NTkiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwZGZzL2NveWxlLXBvcnRmb2xpby9DQSBDb3lsZSAtIDUgUmVhc29ucyBUaGUgT2FrbGFuZCBSYWlkZXJzIFNob3VsZCBUcmFkZSBUaGUgTm8uIDQgUGljayBGb3IgVG9tIEJyYWR5LnBkZiIsImlhdCI6MTc1NjE4NTQwOSwiZXhwIjoyMDcxNTQ1NDA5fQ.QUd2UGHmVeuf9JTXztl4VBLoU463MD-FQTwHhzrP2Xw"
+  },
+  {
+    id: 6,
+    title: "5 Tweets Proving Russell Wilson Is Even Nicer Than You Think",
+    publication: "CA Coyle",
+    date: "2014",
+    content: "An examination of Russell Wilson's social media presence that demonstrates his exceptional character and humility. The article analyzes five specific tweets that showcase how the Seattle Seahawks quarterback goes above and beyond to show kindness, respect, and genuine care for his fans and community.",
+    category: "Sports Journalism",
+    pdfUrl: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/sign/pdfs/coyle-portfolio/CA%20Coyle%20-%205%20Tweets%20Proving%20Russell%20Wilson%20Is%20Even%20Nicer%20Than%20You%20Think.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81M2U0NjZkNi1jMDhjLTQzMDEtYjYxMy01OTU4NGMyMGM0NTkiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwZGZzL2NveWxlLXBvcnRmb2xpby9DQSBDb3lsZSAtIDUgVHdlZXRzIFByb3ZpbmcgUnVzc2VsbCBXaWxzb24gSXMgRXZlbiBOaWNlciBUaGFuIFlvdSBUaGluay5wZGYiLCJpYXQiOjE3NTYxODU1NTIsImV4cCI6MjA3MTU0NTU1Mn0.B8QL6j8GAfyu6zLE5e7PdqncM_0f6VoyKPeQnVUVpY8"
+  },
+  {
+    id: 7,
+    title: "The Coup's Boots Riley Talks Funk, Domestic Espionage",
+    publication: "CBS Seattle",
+    date: "2013",
+    content: "An in-depth interview with Boots Riley, frontman of the hip-hop outfit The Coup, discussing their European tour success, the evolution of their sound from programmed drums to live instrumentation, and their unique fusion of funk, punk, and hip-hop. The interview also covers political topics including the Edward Snowden NSA revelations and the Occupy Movement.",
+    category: "Music Journalism",
+    pdfUrl: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/sign/pdfs/coyle-portfolio/CBS%20SEATTLE%20-%20Boots%20Riley.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81M2U0NjZkNi1jMDhjLTQzMDEtYjYxMy01OTU4NGMyMGM0NTkiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwZGZzL2NveWxlLXBvcnRmb2xpby9DQlMgU0VBVFRMRSAtIEJvb3RzIFJpbGV5LnBkZiIsImlhdCI6MTc1NjE4NTcyOSwiZXhwIjoyMDcxNTQ1NzI5fQ.cCYJEBaMHi78aoyFsPICwsCUwsjkQdZIp8XVe_VsHH8"
+  },
+  {
+    id: 8,
+    title: "Cheap Time's Jeffrey Novak Digs His Bandmates, Talks Possible Covers Album",
+    publication: "CBS Seattle",
+    date: "2014",
+    content: "An interview with Jeffrey Novak of Nashville garage rock trio Cheap Time, discussing their evolution from one-man band to full lineup, their recording process, and future plans including a potential covers album. The piece also covers their touring experiences with bands like Mudhoney and their unique blend of influences from The Saints to The Cramps.",
+    category: "Music Journalism",
+    pdfUrl: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/sign/pdfs/coyle-portfolio/CBS%20SEATTLE%20-%20Cheap%20Time.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81M2U0NjZkNi1jMDhjLTQzMDEtYjYxMy01OTU4NGMyMGM0NTkiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwZGZzL2NveWxlLXBvcnRmb2xpby9DQlMgU0VBVFRMRSAtIENoZWFwIFRpbWUucGRmIiwiaWF0IjoxNzU2MTg1NzcxLCJleHAiOjIwNzE1NDU3NzF9.SEFY5KdPYnGCmi0O8pJ_UZeZBOaVcb_CXrAa4nL5Ww8"
+  },
+  {
+    id: 9,
+    title: "Cheater Slicks Ride Westward After 13 Years",
+    publication: "CBS Seattle",
+    date: "2013",
+    content: "An interview with guitarist and singer Tom Shannon of Cheater Slicks, discussing the band's long-awaited return to the west coast after 13 years, their evolution from clearing bars with loud, screeching music to a more groove-oriented sound, and their upcoming performance at the Portland Bender festival. The piece also covers their recording process and influence on the garage rock scene.",
+    category: "Music Journalism",
+    pdfUrl: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/sign/pdfs/coyle-portfolio/CBS%20SEATTLE%20-%20Cheater%20Slicks.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81M2U0NjZkNi1jMDhjLTQzMDEtYjYxMy01OTU4NGMyMGM0NTkiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwZGZzL2NveWxlLXBvcnRmb2xpby9DQlMgU0VBVFRMRSAtIENoZWF0ZXIgU2xpY2tzLnBkZiIsImlhdCI6MTc1NjE4NjA4NCwiZXhwIjoyMDcxNTQ2MDg0fQ.VJxzMLbIf5ncA9Zl-gasaDLoooDMKguXZlHxBd0gJOo"
   }
 ]
 
@@ -90,38 +101,15 @@ export function Catalog() {
   const [isDragging, setIsDragging] = useState<boolean>(false)
   const [expandedFolders, setExpandedFolders] = useState<{ [key: string]: boolean }>({
     'coyle-portfolio': true,
-    'music-journalism': true,
-    'sports-journalism': false,
   })
-
-  // Combine all articles
-  const allArticles = [...musicJournalismArticles, ...sportsJournalismArticles]
 
   // Get current article info for path display
   const getCurrentArticleInfo = (articleIndex: number) => {
-    const article = allArticles[articleIndex]
-    if (musicJournalismArticles.find(a => a.id === article.id)) {
-      return {
-        topLevel: 'coyle-portfolio',
-        subDirectory: 'music-journalism',
-        article
-      }
-    } else {
-      return {
-        topLevel: 'coyle-portfolio',
-        subDirectory: 'sports-journalism',
-        article
-      }
+    const article = portfolioArticles[articleIndex]
+    return {
+      topLevel: 'coyle-portfolio',
+      article
     }
-  }
-
-  // Get articles with their original indices
-  const getMusicJournalismArticles = () => {
-    return musicJournalismArticles.map((article, index) => ({ ...article, originalIndex: index }))
-  }
-
-  const getSportsJournalismArticles = () => {
-    return sportsJournalismArticles.map((article, index) => ({ ...article, originalIndex: index + musicJournalismArticles.length }))
   }
 
   const toggleFolder = (folderName: string) => {
@@ -169,8 +157,8 @@ export function Catalog() {
             style={{ width: `${sidebarWidth}%` }}
           >
             <div className="directory-header">
-              <span className="folder-icon">📁</span>
-              <span className="folder-name">coyle-portfolio/</span>
+             
+              <span className="folder-name">portfolio</span>
             </div>
             
             <div className="directory-tree">
@@ -183,76 +171,25 @@ export function Catalog() {
                   <span className="expand-icon">
                     {expandedFolders['coyle-portfolio'] ? '▼' : '▶'}
                   </span>
-                  <span className="folder-icon">📁</span>
-                  <span className="folder-name">coyle-portfolio/</span>
-                  <span className="item-count">({allArticles.length})</span>
+                 
+                  <span className="folder-name">Articles</span>
+                  <span className="item-count">({portfolioArticles.length})</span>
                 </div>
                 
                 {expandedFolders['coyle-portfolio'] && (
-                  <div className="subdirectory-list">
-                    {/* Music Journalism Directory */}
-                    <div className="folder-group nested">
-                      <div 
-                        className="folder-item sub-folder"
-                        onClick={() => toggleFolder('music-journalism')}
+                  <div className="file-list">
+                    {portfolioArticles.map((article, index) => (
+                      <div
+                        key={article.id}
+                        className={`file-item ${activeArticle === index ? 'active' : ''}`}
+                        onClick={() => setActiveArticle(index)}
                       >
-                        <span className="expand-icon">
-                          {expandedFolders['music-journalism'] ? '▼' : '▶'}
-                        </span>
-                        <span className="folder-icon">📁</span>
-                        <span className="folder-name">music-journalism/</span>
-                        <span className="item-count">({musicJournalismArticles.length})</span>
-                      </div>
                       
-                      {expandedFolders['music-journalism'] && (
-                        <div className="file-list">
-                          {getMusicJournalismArticles().map((article) => (
-                            <div
-                              key={article.id}
-                              className={`file-item ${activeArticle === article.originalIndex ? 'active' : ''}`}
-                              onClick={() => setActiveArticle(article.originalIndex)}
-                            >
-                              <span className="file-icon">📄</span>
-                              <span className="file-name">
-                                {article.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.md
-                              </span>
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Sports Journalism Directory */}
-                    <div className="folder-group nested">
-                      <div 
-                        className="folder-item sub-folder"
-                        onClick={() => toggleFolder('sports-journalism')}
-                      >
-                        <span className="expand-icon">
-                          {expandedFolders['sports-journalism'] ? '▼' : '▶'}
+                        <span className="file-name">
+                          {article.title.toLowerCase().replace(/[^a-z0-9]+/g, ' ')}.md
                         </span>
-                        <span className="folder-icon">📁</span>
-                        <span className="folder-name">sports-journalism/</span>
-                        <span className="item-count">({sportsJournalismArticles.length})</span>
                       </div>
-                      
-                      {expandedFolders['sports-journalism'] && (
-                        <div className="file-list">
-                          {getSportsJournalismArticles().map((article) => (
-                            <div
-                              key={article.id}
-                              className={`file-item ${activeArticle === article.originalIndex ? 'active' : ''}`}
-                              onClick={() => setActiveArticle(article.originalIndex)}
-                            >
-                              <span className="file-icon">📄</span>
-                              <span className="file-name">
-                                {article.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.md
-                              </span>
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
+                    ))}
                   </div>
                 )}
               </div>
@@ -273,8 +210,6 @@ export function Catalog() {
             <div className="article-header">
               <div className="file-path">
                 <span className="path-segment">{currentInfo.topLevel}</span>
-                <span className="path-separator">/</span>
-                <span className="path-segment">{currentInfo.subDirectory}</span>
                 <span className="path-separator">/</span>
                 <span className="path-segment active-file">
                   {currentInfo.article.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.md

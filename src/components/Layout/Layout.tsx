@@ -8,7 +8,7 @@ export function Layout() {
       <nav className="navbar">
         <div className="nav-container">
           <Link to="/" className="nav-logo">
-         <strong>Chris Coyle </strong>   <em>: Journalist, Author, Musician</em>
+         <strong>Chris Coyle </strong> <em>: Journalist, Author, Musician</em>
           </Link>
           <div className="nav-links">
             <Link to="/" className="nav-link">

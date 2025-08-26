@@ -69,12 +69,6 @@ body:has(.catalog-page) {
   font-family: 'Roboto', sans-serif;
 }
 
-.folder-group.nested {
-  margin-left: 1rem;
-  margin-bottom: 0.3rem;
-  font-family: 'Roboto', sans-serif;
-}
-
 .folder-item {
   font-family: 'Roboto', sans-serif;
   display: flex;
@@ -95,13 +89,6 @@ body:has(.catalog-page) {
   font-weight: 600;
   border-bottom: 1px solid #333;
   padding-bottom: 0.7rem;
-}
-
-.folder-item.sub-folder {
-  padding-left: 2rem;
-  font-size: 1.1rem;
-  border-left: 2px solid #333;
-  
 }
 
 .expand-icon {
@@ -130,62 +117,10 @@ body:has(.catalog-page) {
   font-family: 'Roboto', sans-serif;
 }
 
-.subdirectory-list {
+.file-list {
   margin-left: 1rem;
   border-left: 2px solid #333;
   padding-left: 0.5rem;
-}
-
-.file-list {
-  margin-left: 2rem;
-  border-left: 1px solid #333;
-}
-
-.category-group {
-  margin-bottom: 0.5rem;
-}
-
-.category-folder {
-  display: flex;
-  align-items: center;
-  padding: 0.3rem 1rem;
-  color: #f5f5dc;
-  font-size: 1.1rem;
-  opacity: 0.8;
-  font-family: 'Roboto', sans-serif;
-  cursor: pointer;
-  transition: background-color 0.2s ease, opacity 0.2s ease;
-  user-select: none;
-}
-
-.category-folder:hover {
-  background: #2a2a2a;
-  opacity: 1;
-}
-
-.category-folder .expand-icon {
-  width: 12px;
-  margin-right: 0.5rem;
-  font-size: 0.7rem;
-  color: #999;
-}
-
-.category-folder .folder-icon {
-  margin-right: 0.4rem;
-  font-size: 0.6rem;
-}
-
-.category-folder .folder-name {
-  font-weight: 500;
-  flex: 1;
-  font-family: 'PT Mono', monospace;
-  text-transform: uppercase;
-}
-
-.category-folder .item-count {
-  color: #666;
-  font-size: 0.8rem;
-  margin-left: 0.5rem;
 }
 
 .file-item {

@@ -1,8 +1,11 @@
 /* Contact Page Styles */
 .contact-page {
   padding: 2rem 0 5rem;
-  background: #000000;
+  background: #000000 url('https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/squish-band.png') center center;
+  background-size: cover;
+  background-attachment: scroll;
   min-height: 80vh;
+  position: relative;
 }
 
 .contact-page h1 {
@@ -21,12 +24,25 @@
   color: #f5f5dc;
 }
 
+.contact-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
 .contact-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   max-width: 1000px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .contact-info h2,
