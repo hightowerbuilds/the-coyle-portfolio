@@ -184,8 +184,8 @@ export function Catalog() {
                         className={`file-item ${activeArticle === index ? 'active' : ''}`}
                         onClick={() => setActiveArticle(index)}
                       >
-                      
-                        <span className="file-name">
+                    
+                        <span className={`file-name ${article.category === 'Music Journalism' ? 'music-article' : ''}`}>
                           {article.title.toLowerCase().replace(/[^a-z0-9]+/g, ' ')}.md
                         </span>
                       </div>
@@ -207,24 +207,10 @@ export function Catalog() {
             className="article-viewer"
             style={{ width: `${100 - sidebarWidth}%` }}
           >
-            <div className="article-header">
-              <div className="file-path">
-                <span className="path-segment">{currentInfo.topLevel}</span>
-                <span className="path-separator">/</span>
-                <span className="path-segment active-file">
-                  {currentInfo.article.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.md
-                </span>
-              </div>
-              
-              <div className="article-meta">
-                <span className="article-category">{currentInfo.article.category}</span>
-                <span className="publication">{currentInfo.article.publication}</span>
-                <span className="date">{currentInfo.article.date}</span>
-              </div>
-            </div>
-            
             <div className="article-content">
-              <h1>{currentInfo.article.title}</h1>
+              <h1 className={currentInfo.article.category === 'Music Journalism' ? 'music-title' : ''}>
+                {currentInfo.article.title}
+              </h1>
               
               {currentInfo.article.pdfUrl ? (
                 <div className="pdf-viewer">
