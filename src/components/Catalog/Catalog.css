@@ -166,7 +166,7 @@ body:has(.catalog-page) {
   overflow: hidden;
   text-overflow: ellipsis;
   font-family: 'Oswald', sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
 }
 
