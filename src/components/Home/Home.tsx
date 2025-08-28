@@ -76,7 +76,7 @@ export function Home() {
             >
               <div className="accordion-header">
                 <img 
-                  src="https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/scab-attack.jpg" 
+                  src="https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/oblivians-iamge.png" 
                   alt="The Oblivians" 
                   className="accordion-image"
                 />
