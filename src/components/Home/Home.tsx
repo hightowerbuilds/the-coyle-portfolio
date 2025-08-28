@@ -28,13 +28,11 @@ export function Home() {
 
       <section className="about">
         <div className="container">
-          <h2 className="about-title">A little about me and about this website</h2>
+          <h2 className="about-title">THE WORLD IS YOUR AIOLI!</h2>
           <p className="about-text">
-            I've been writing for what seems like time. Some time. A long time? I'm not entirely certain but there is indeed time deeply tied to me writing. I love it, my time writing, that is. 
+           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, earum eum laudantium dolorum ipsam similique eius perspiciatis ipsum culpa, unde odit ducimus velit. Delectus sunt sequi quaerat porro autem eius. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, earum eum laudantium dolorum ipsam similique eius perspiciatis ipsum culpa, unde odit ducimus velit. Delectus sunt sequi quaerat porro autem eius.
           </p>
-          <p className="about-text">
-           I like style. Yeah that's cool, that aint. Ya know stuff like that. 
-          </p>
+        
         </div>
       </section>
 
