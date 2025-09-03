@@ -62,3 +62,106 @@
 .main-content {
   margin-top: 0;
 }
+
+/* Default desktop styles - hide mobile elements */
+.nav-logo-mobile {
+  display: none;
+}
+
+.mobile-menu-button {
+  display: none;
+}
+
+.mobile-nav-dropdown {
+  display: none;
+}
+
+/* Mobile Styles - iPhone 11 and similar devices */
+@media (max-width: 500px) {
+  .nav-container {
+    padding: 1rem 15px;
+  }
+
+  /* Hide desktop logo, show mobile logo */
+  .nav-logo-desktop {
+    display: none;
+  }
+  
+  .nav-logo-mobile {
+    display: block !important;
+    font-size: 2rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+  }
+
+  /* Hide desktop navigation */
+  .desktop-nav {
+    display: none;
+  }
+
+  /* Show mobile hamburger button */
+  .mobile-menu-button {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .hamburger-line {
+    width: 20px;
+    height: 2px;
+    background-color: #f5f5dc;
+    margin: 2px 0;
+    transition: all 0.3s ease;
+    border-radius: 1px;
+  }
+
+  /* Mobile dropdown menu */
+  .mobile-nav-dropdown {
+    display: block !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #1a1a1a;
+    border-bottom: 3px solid #ff8c00;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+  }
+
+  .mobile-nav-dropdown.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-nav-link {
+    display: block;
+    padding: 1rem 20px;
+    color: #f5f5dc !important;
+    font-family: 'Courier', monospace;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-bottom: 1px solid #333;
+    transition: background 0.3s ease;
+  }
+
+  .mobile-nav-link:hover {
+    background: #333;
+    color: #d4d4aa !important;
+  }
+
+  .mobile-nav-link:last-child {
+    border-bottom: none;
+  }
+}
