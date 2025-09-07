@@ -41,6 +41,27 @@
   margin: 0 auto;
   position: relative;
   z-index: 2;
+  align-items: center;
+}
+
+.contact-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-photo {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  border: 3px solid #8B4513;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.contact-photo:hover {
+  transform: scale(1.02);
 }
 
 .contact-info h2,
@@ -166,5 +187,9 @@
   .contact-content {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+  
+  .contact-photo {
+    max-width: 300px;
   }
 }
