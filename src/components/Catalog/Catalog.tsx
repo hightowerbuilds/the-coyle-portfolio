@@ -404,17 +404,30 @@ export function Catalog() {
               </div>
               <div className="modal-body">
                 {modalArticle.pdfUrl ? (
-                  <iframe
-                    src={modalArticle.pdfUrl}
-                    width="100%"
-                    height="100%"
-                    style={{
-                      border: 'none',
-                      borderRadius: '4px',
-                      minHeight: '70vh'
-                    }}
-                    title={modalArticle.title}
-                  />
+                  <div className="mobile-pdf-viewer">
+                    <iframe
+                      src={`https://docs.google.com/viewer?url=${encodeURIComponent(modalArticle.pdfUrl)}&embedded=true`}
+                      width="100%"
+                      height="100%"
+                      style={{
+                        border: 'none',
+                        borderRadius: '4px',
+                        minHeight: '70vh'
+                      }}
+                      title={modalArticle.title}
+                    />
+                    <div className="pdf-fallback-mobile">
+                      <p><strong>Having trouble viewing?</strong></p>
+                      <a 
+                        href={modalArticle.pdfUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="download-pdf-btn"
+                      >
+                        Open PDF in New Tab
+                      </a>
+                    </div>
+                  </div>
                 ) : (
                   <div className="article-content">
                     <p>{modalArticle.content}</p>
