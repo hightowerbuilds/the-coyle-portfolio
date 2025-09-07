@@ -1,12 +1,6 @@
 import './Contact.css'
 
 export function Contact() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    // Handle form submission
-    console.log('Form submitted')
-  }
-
   return (
     <div className="contact-page">
       <div className="container">
@@ -40,31 +34,6 @@ export function Contact() {
               <a href="https://instagram.com/chriscoyle" target="_blank" rel="noopener noreferrer">Instagram</a>
             </div>
           </div>
-          
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <h2>Send a Message</h2>
-            <div className="form-group">
-              <label htmlFor="name">Name *</label>
-              <input type="text" id="name" name="name" required />
-            </div>
-            
-            <div className="form-group">
-              <label htmlFor="email">Email *</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            
-            <div className="form-group">
-              <label htmlFor="subject">Subject</label>
-              <input type="text" id="subject" name="subject" />
-            </div>
-            
-            <div className="form-group">
-              <label htmlFor="message">Message *</label>
-              <textarea id="message" name="message" rows={6} required></textarea>
-            </div>
-            
-            <button type="submit" className="submit-btn">Send Message</button>
-          </form>
         </div>
       </div>
     </div>

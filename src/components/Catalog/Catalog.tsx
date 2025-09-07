@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useScreenSize } from '../../hooks/useScreenSize'
 import './Catalog.css'
 
 interface Article {
@@ -219,6 +220,9 @@ export function Catalog() {
   const [expandedFolders, setExpandedFolders] = useState<{ [key: string]: boolean }>({
     'coyle-portfolio': true,
   })
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
+  const [modalArticle, setModalArticle] = useState<Article | null>(null)
+  const { isMobile } = useScreenSize()
 
   // Handle URL parameter to open specific article
   useEffect(() => {
@@ -260,6 +264,24 @@ export function Catalog() {
     }))
   }
 
+  const openModal = (article: Article) => {
+    setModalArticle(article)
+    setIsModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+    setModalArticle(null)
+  }
+
+  const handleArticleClick = (index: number) => {
+    if (isMobile) {
+      openModal(portfolioArticles[index])
+    } else {
+      setActiveArticle(index)
+    }
+  }
+
   // Drag handling for resizable partition
   const handleMouseDown = (e: React.MouseEvent) => {
     e.preventDefault()
@@ -289,6 +311,68 @@ export function Catalog() {
 
   const currentInfo = getCurrentArticleInfo(activeArticle)
 
+  // Mobile layout
+  if (isMobile) {
+    return (
+      <div className="catalog-page">
+        <div className="mobile-catalog">
+          <h1>Articles</h1>
+          <div className="mobile-article-list">
+            {portfolioArticles.map((article) => (
+              <div
+                key={article.id}
+                className="mobile-article-item"
+                onClick={() => openModal(article)}
+              >
+                <h3 className={article.category === 'Music Journalism' ? 'music-title' : ''}>
+                  {article.title}
+                </h3>
+                <p className="article-meta">
+                  {article.publication} • {article.date} • {article.category}
+                </p>
+                <p className="article-excerpt">{article.content}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Mobile Modal */}
+        {isModalOpen && modalArticle && (
+          <div className="modal-overlay" onClick={closeModal}>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+              <div className="modal-header">
+                <h2>{modalArticle.title}</h2>
+                <button className="modal-close" onClick={closeModal}>
+                  Done
+                </button>
+              </div>
+              <div className="modal-body">
+                {modalArticle.pdfUrl ? (
+                  <iframe
+                    src={modalArticle.pdfUrl}
+                    width="100%"
+                    height="100%"
+                    style={{
+                      border: 'none',
+                      borderRadius: '4px',
+                      minHeight: '70vh'
+                    }}
+                    title={modalArticle.title}
+                  />
+                ) : (
+                  <div className="article-content">
+                    <p>{modalArticle.content}</p>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    )
+  }
+
+  // Desktop layout
   return (
     <div className="catalog-page">
       <div className={`directory-layout ${isDragging ? 'no-select' : ''}`}>
@@ -323,7 +407,7 @@ export function Catalog() {
                       <div
                         key={article.id}
                         className={`file-item ${activeArticle === index ? 'active' : ''}`}
-                        onClick={() => setActiveArticle(index)}
+                        onClick={() => handleArticleClick(index)}
                       >
                     
                         <span className={`file-name ${article.category === 'Music Journalism' ? 'music-article' : ''}`}>

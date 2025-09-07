@@ -409,3 +409,146 @@ body:has(.catalog-page) {
     gap: 1rem;
   }
 }
+
+/* Mobile Catalog Styles */
+.mobile-catalog {
+  padding: 1rem;
+  max-width: 100%;
+}
+
+.mobile-catalog h1 {
+  color: #f5f5dc;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.mobile-article-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobile-article-item {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mobile-article-item:hover {
+  background: #2a2a2a;
+  border-color: #8B4513;
+  transform: translateY(-2px);
+}
+
+.mobile-article-item h3 {
+  color: #f5f5dc;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.mobile-article-item h3.music-title {
+  color: #ff8c00;
+}
+
+.article-meta {
+  color: #d4d4aa;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  font-family: 'PT Mono', monospace;
+}
+
+.article-excerpt {
+  color: #f5f5dc;
+  font-size: 1rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: #1a1a1a;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 100vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #8B4513;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #333;
+  background: #242424;
+}
+
+.modal-header h2 {
+  color: #f5f5dc;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2rem;
+  margin: 0;
+  flex: 1;
+  padding-right: 1rem;
+}
+
+.modal-close {
+  background: #8B4513;
+  color: #f5f5dc;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  background: #a0522d;
+}
+
+.modal-body {
+  flex: 1;
+  padding: 0;
+  overflow: hidden;
+}
+
+.modal-body iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-body .article-content {
+  padding: 1.5rem;
+  color: #f5f5dc;
+  line-height: 1.6;
+  overflow-y: auto;
+  max-height: 70vh;
+}

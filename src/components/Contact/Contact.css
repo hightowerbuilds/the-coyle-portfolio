@@ -1,9 +1,7 @@
 /* Contact Page Styles */
 .contact-page {
   padding: 2rem 0 5rem;
-  background: #000000 url('https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/squish-band.png') center center;
-  background-size: cover;
-  background-attachment: scroll;
+  background: #000000;
   min-height: 80vh;
   position: relative;
 }

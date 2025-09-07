@@ -27,6 +27,20 @@
   align-items: center;
 }
 
+.nav-logo-desktop {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-logo-desktop-image {
+  height: 50px;
+  width: 50px;
+  border-radius: 2%;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+}
+
 .nav-logo-image {
   height: 60px;
   width: auto;
@@ -88,10 +102,20 @@
   }
   
   .nav-logo-mobile {
-    display: block !important;
+    display: flex !important;
+    align-items: center;
+    gap: 0.5rem;
     font-size: 2rem;
     font-family: 'Oswald', sans-serif;
     font-weight: 500;
+  }
+
+  .nav-logo-mobile-image {
+    height: 40px;
+    width: 40px;
+    border-radius: 2%;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
   }
 
   /* Hide desktop navigation */

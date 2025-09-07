@@ -57,8 +57,9 @@ section {
 }
 
 .about {
-  background: #000000 url('https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/cc-scab-solo.jpg') center bottom;
+  background: #000000 url('https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/scab-attack.jpg') center center;
   background-size: cover;
+  background-repeat: no-repeat;
   border-bottom: 1px solid #333;
   position: relative;
   height: 90vh;
@@ -85,14 +86,7 @@ section {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(0px);
   z-index: 1;
-  transition: all 0.3s ease;
-}
-
-.about:hover::before {
-  backdrop-filter: blur(2px);
-  background: rgba(0, 0, 0, 0.8);
 }
 
 .about .container {
@@ -151,14 +145,7 @@ section {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(0px);
   z-index: 1;
-  transition: all 0.3s ease;
-}
-
-.services:hover::before {
-  backdrop-filter: blur(2px);
-  background: rgba(0, 0, 0, 0.6);
 }
 
 .services .container {
@@ -185,6 +172,8 @@ section {
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   margin-top: 2rem;
+  position: relative;
+  z-index: 3;
 }
 
 .accordion-item {
@@ -539,6 +528,9 @@ section {
 
   .about {
     height: 70vh;
+    background-image: url('https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/cc-scab-solo.jpg');
+    background-position: center bottom;
+    background-size: cover;
   }
 
   .about h2 {
