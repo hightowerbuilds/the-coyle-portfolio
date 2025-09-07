@@ -5,51 +5,40 @@ export function Footer() {
     <footer className="footer">
       <div className="container">
         <div className="footer-content">
-          <div className="footer-section">
-            <h3>Connect with Chris</h3>
-            <div className="social-links">
-              <a 
-                href="https://twitter.com/chriscoyle" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="social-link"
-              >
-                Twitter
-              </a>
-            
-              <a 
-                href="https://instagram.com/chriscoyle" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="social-link"
-              >
-                Instagram
-              </a>
-            </div>
+          <div className="footer-left">
+            <span>&copy; 2025 Chris Coyle</span>
+            <span className="separator">•</span>
+            <a href="mailto:chris@chriscoyle.com" className="footer-link">chris@chriscoyle.com</a>
           </div>
           
-          <div className="footer-section">
-            <h3>Contact</h3>
-            <p>chris@chriscoyle.com</p>
-            <p>Sacramento, CA</p>
-          </div>
-          
-          <div className="footer-section">
-           
-            <p>Website by</p>
+          <div className="footer-right">
+            <a 
+              href="https://twitter.com/chriscoyle" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="footer-link"
+            >
+              Twitter
+            </a>
+            <span className="separator">•</span>
+            <a 
+              href="https://instagram.com/chriscoyle" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="footer-link"
+            >
+              Instagram
+            </a>
+            <span className="separator">•</span>
             <a 
               href="https://hightowerbuilds.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="credit-link"
+              className="footer-link credit"
             >
               hightowerbuilds.com
             </a>
           </div>
-        </div>
-        
-        <div className="footer-bottom">
-          <p>&copy; 2025 Chris Coyle. All rights reserved.</p>
         </div>
       </div>
     </footer>
