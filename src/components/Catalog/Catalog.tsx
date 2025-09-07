@@ -74,7 +74,7 @@ const portfolioArticles: Article[] = [
     date: "2013",
     content: "An in-depth interview with Boots Riley, frontman of the hip-hop outfit The Coup, discussing their European tour success, the evolution of their sound from programmed drums to live instrumentation, and their unique fusion of funk, punk, and hip-hop. The interview also covers political topics including the Edward Snowden NSA revelations and the Occupy Movement.",
     category: "Music Journalism",
-    pdfUrl: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/sign/pdfs/coyle-portfolio/CBS%20SEATTLE%20-%20Boots%20Riley.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81M2U0NjZkNi1jMDhjLTQzMDEtYjYxMy01OTU4NGMyMGM0NTkiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwZGZzL2NveWxlLXBvcnRmb2xpby9DQSBDb3lsZSAtIDUgUHJvIEF0aGxldGVzIFdobyBTaGFyZSBOYW1lcyBXaXRoIEZhbW91cyBSb2NrZXJzLnBkZiIsImlhdCI6MTc1NjE4NTcyOSwiZXhwIjoyMDcxNTQ1NzI5fQ.cCYJEBaMHi78aoyFsPICwsCUwsjkQdZIp8XVe_VsHH8"
+    pdfUrl: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/sign/pdfs/coyle-portfolio/CBS%20SEATTLE%20-%20Boots%20Riley.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81M2U0NjZkNi1jMDhjLTQzMDEtYjYxMy01OTU4NGMyMGM0NTkiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwZGZzL2NveWxlLXBvcnRmb2xpby9DQlMgU0VBVFRMRSAtIEJvb3RzIFJpbGV5LnBkZiIsImlhdCI6MTc1NzIxMzA5NSwiZXhwIjoyMDcyNTczMDk1fQ.zGNPp8vYXbO2E3wKhliUqhxAuMfMx79CfD6En1ZBa0U"
   },
   {
     id: 8,
