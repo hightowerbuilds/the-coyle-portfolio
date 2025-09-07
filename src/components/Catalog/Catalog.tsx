@@ -313,26 +313,53 @@ export function Catalog() {
 
   // Mobile layout
   if (isMobile) {
+    // Group articles by category
+    const sportsArticles = portfolioArticles.filter(article => article.category === 'Sports Journalism')
+    const musicArticles = portfolioArticles.filter(article => article.category === 'Music Journalism')
+
     return (
       <div className="catalog-page">
         <div className="mobile-catalog">
           <h1>Articles</h1>
-          <div className="mobile-article-list">
-            {portfolioArticles.map((article) => (
-              <div
-                key={article.id}
-                className="mobile-article-item"
-                onClick={() => openModal(article)}
-              >
-                <h3 className={article.category === 'Music Journalism' ? 'music-title' : ''}>
-                  {article.title}
-                </h3>
-                <p className="article-meta">
-                  {article.publication} • {article.date} • {article.category}
-                </p>
-                <p className="article-excerpt">{article.content}</p>
-              </div>
-            ))}
+          
+          {/* Sports Journalism Section */}
+          <div className="article-section">
+            <h2 className="section-title">Sports Journalism</h2>
+            <div className="mobile-article-list">
+              {sportsArticles.map((article) => (
+                <div
+                  key={article.id}
+                  className="mobile-article-item"
+                  onClick={() => openModal(article)}
+                >
+                  <h3>{article.title}</h3>
+                  <p className="article-meta">
+                    {article.publication} • {article.date}
+                  </p>
+                  <p className="article-excerpt">{article.content}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Music Journalism Section */}
+          <div className="article-section">
+            <h2 className="section-title music-section">Music Journalism</h2>
+            <div className="mobile-article-list">
+              {musicArticles.map((article) => (
+                <div
+                  key={article.id}
+                  className="mobile-article-item"
+                  onClick={() => openModal(article)}
+                >
+                  <h3 className="music-title">{article.title}</h3>
+                  <p className="article-meta">
+                    {article.publication} • {article.date}
+                  </p>
+                  <p className="article-excerpt">{article.content}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

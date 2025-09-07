@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react'
-import { Outlet, Link } from '@tanstack/react-router'
+import { Outlet, Link, useLocation } from '@tanstack/react-router'
 import { Footer } from './Footer'
 import './Layout.css'
 
 export function Layout() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const location = useLocation()
 
   const desktopImages = [
     'https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/chris1.png',
@@ -101,7 +102,7 @@ export function Layout() {
       <main className="main-content">
         <Outlet />
       </main>
-      <Footer />
+      {location.pathname !== '/catalog' && <Footer />}
     </>
   )
 }
