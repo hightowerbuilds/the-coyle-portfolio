@@ -1,10 +1,4 @@
-/* Prevent body scroll on desktop catalog page only */
-@media (min-width: 501px) {
-  body:has(.directory-layout) {
-    overflow: hidden;
-    height: 100vh;
-  }
-}
+/* Allow body scroll on all devices */
 
 /* Catalog Page Styles */
 .catalog-page {
@@ -26,7 +20,8 @@
 
 @media (min-width: 501px) {
   .directory-layout {
-    height: 100%;
+    min-height: calc(100vh - 140px);
+    max-height: calc(100vh - 140px);
   }
 }
 
@@ -386,8 +381,7 @@
 
 @media (max-width: 768px) {
   .catalog-page {
-    height: calc(100vh - 70px);
-    overflow: hidden;
+    min-height: calc(100vh - 70px);
     padding: 20px;
     box-sizing: border-box;
   }
@@ -442,18 +436,58 @@
   padding-bottom: 4rem;
 }
 
+/* Section Header (Clickable) */
+.section-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.75rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  user-select: none;
+  margin-bottom: 1rem;
+  background: #1a1a1a;
+  border: 1px solid #333;
+}
+
+.section-header:hover {
+  background: #2a2a2a;
+  border-color: #8B4513;
+}
+
+.section-header.music-section:hover {
+  border-color: #ff8c00;
+}
+
+.section-expand-icon {
+  color: #d4d4aa;
+  font-size: 0.8rem;
+  margin-right: 0.75rem;
+  transition: transform 0.3s ease;
+  width: 12px;
+  text-align: center;
+}
+
 .section-title {
   color: #f5f5dc;
   font-family: 'Courier New', Courier, monospace;
   font-size: 1.5rem;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #8B4513;
+  margin: 0;
+  padding: 0;
+  border: none;
   text-align: left;
+  flex: 1;
 }
 
 .section-title.music-section {
-  border-bottom-color: #ff8c00;
+  color: #f5f5dc;
+}
+
+.section-count {
+  color: #666;
+  font-size: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 0.5rem;
 }
 
 .mobile-article-list {
@@ -461,6 +495,20 @@
   flex-direction: column;
   gap: 1rem;
   width: 100%;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.mobile-article-list.expanded {
+  max-height: none;
+  opacity: 1;
+}
+
+.mobile-article-list.collapsed {
+  max-height: 0;
+  opacity: 0;
+  gap: 0;
+  margin-top: -1rem;
 }
 
 .mobile-article-item {
@@ -487,7 +535,7 @@
 }
 
 .mobile-article-item h3.music-title {
-  color: #ff8c00;
+  color: #f5f5dc;
 }
 
 .article-meta {

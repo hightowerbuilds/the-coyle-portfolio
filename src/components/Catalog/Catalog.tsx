@@ -220,6 +220,10 @@ export function Catalog() {
   const [expandedFolders, setExpandedFolders] = useState<{ [key: string]: boolean }>({
     'coyle-portfolio': true,
   })
+  const [expandedSections, setExpandedSections] = useState<{ [key: string]: boolean }>({
+    'sports': true,
+    'music': true,
+  })
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
   const [modalArticle, setModalArticle] = useState<Article | null>(null)
   const { isMobile } = useScreenSize()
@@ -261,6 +265,13 @@ export function Catalog() {
     setExpandedFolders(prev => ({
       ...prev,
       [folderName]: !prev[folderName]
+    }))
+  }
+
+  const toggleSection = (sectionName: string) => {
+    setExpandedSections(prev => ({
+      ...prev,
+      [sectionName]: !prev[sectionName]
     }))
   }
 
@@ -320,12 +331,21 @@ export function Catalog() {
     return (
       <div className="catalog-page">
         <div className="mobile-catalog">
-          <h1>Articles</h1>
+          <h1>Catalog</h1>
           
           {/* Sports Journalism Section */}
           <div className="article-section">
-            <h2 className="section-title">Sports Journalism</h2>
-            <div className="mobile-article-list">
+            <div 
+              className="section-header"
+              onClick={() => toggleSection('sports')}
+            >
+              <span className="section-expand-icon">
+                {expandedSections['sports'] ? '▼' : '▶'}
+              </span>
+              <h2 className="section-title">Sports Journalism</h2>
+              <span className="section-count">({sportsArticles.length})</span>
+            </div>
+            <div className={`mobile-article-list ${expandedSections['sports'] ? 'expanded' : 'collapsed'}`}>
               {sportsArticles.map((article) => (
                 <div
                   key={article.id}
@@ -344,8 +364,17 @@ export function Catalog() {
 
           {/* Music Journalism Section */}
           <div className="article-section">
-            <h2 className="section-title music-section">Music Journalism</h2>
-            <div className="mobile-article-list">
+            <div 
+              className="section-header music-section"
+              onClick={() => toggleSection('music')}
+            >
+              <span className="section-expand-icon">
+                {expandedSections['music'] ? '▼' : '▶'}
+              </span>
+              <h2 className="section-title music-section">Music Journalism</h2>
+              <span className="section-count">({musicArticles.length})</span>
+            </div>
+            <div className={`mobile-article-list ${expandedSections['music'] ? 'expanded' : 'collapsed'}`}>
               {musicArticles.map((article) => (
                 <div
                   key={article.id}
