@@ -63,6 +63,9 @@ export function Layout() {
             <Link to="/catalog" className="nav-link">
               Catalog
             </Link>
+            <Link to="/sports-parodies" className="nav-link">
+              Sports Parodies
+            </Link>
             <Link to="/other-works" className="nav-link">
               Other Works
             </Link>
@@ -90,6 +93,9 @@ export function Layout() {
           </Link>
           <Link to="/catalog" className="mobile-nav-link" onClick={closeMobileMenu}>
             Catalog
+          </Link>
+          <Link to="/sports-parodies" className="mobile-nav-link" onClick={closeMobileMenu}>
+            Sports Parodies
           </Link>
           <Link to="/other-works" className="mobile-nav-link" onClick={closeMobileMenu}>
             Other Works

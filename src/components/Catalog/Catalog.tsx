@@ -14,60 +14,6 @@ interface Article {
 
 const portfolioArticles: Article[] = [
   {
-    id: 1,
-    title: "5 Former MLB Players Whose Nicknames Make No Sense At All",
-    publication: "CA Coyle",
-    date: "2024",
-    content: "An entertaining examination of former MLB players whose nicknames seem to have no logical connection to their playing style, personality, or background. This piece explores the curious origins of these monikers and what they reveal about baseball culture and the creative ways fans and teammates come up with player identities.",
-    category: "Sports Journalism",
-    pdfUrl: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/sign/pdfs/coyle-portfolio/CA%20Coyle%20-%205%20Former%20MLB%20Players%20Whose%20Nicknames%20Make%20No%20Sense%20At%20All.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81M2U0NjZkNi1jMDhjLTQzMDEtYjYxMy01OTU4NGMyMGM0NTkiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwZGZzL2NveWxlLXBvcnRmb2xpby9DQSBDb3lsZSAtIDUgRm9ybWVyIE1MQiBQbGF5ZXJzIFdob3NlIE5pY2tuYW1lcyBNYWtlIE5vIFNlbnNlIEF0IEFsbC5wZGYiLCJpYXQiOjE3NTYwOTIxOTYsImV4cCI6MjA3MTQ1MjE5Nn0.N5x5sWH2B-_5e_nB-tvAWE0Xb9FfSTZiZU5jJRpLFUI"
-  },
-  {
-    id: 2,
-    title: "5 Indications Slugerrr Is Sending The Wrong Message To Kids",
-    publication: "CA Coyle",
-    date: "2024",
-    content: "An analysis of how Slugerrr's messaging and content may be sending inappropriate signals to young audiences. This piece examines the potential negative impacts and suggests ways to address these concerns.",
-    category: "Sports Journalism",
-    pdfUrl: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/sign/pdfs/coyle-portfolio/CA%20Coyle%20-%205%20Indications%20Slugerrr%20Is%20Sending%20The%20Wrong%20Message%20To%20Kids.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81M2U0NjZkNi1jMDhjLTQzMDEtYjYxMy01OTU4NGMyMGM0NTkiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwZGZzL2NveWxlLXBvcnRmb2xpby9DQSBDb3lsZSAtIDUgSW5kaWNhdGlvbnMgU2x1Z2VycnIgSXMgU2VuZGluZyBUaGUgV3JvbmcgTWVzc2FnZSBUbyBLaWRzLnBkZiIsImlhdCI6MTc1NjA5NjU3MiwiZXhwIjoyMDcxNDU2NTcyfQ.paFFEZYePzZS2v-u3NJ5ySuXmKbbIx3qoZGm-b3_4Ac"
-  },
-  {
-    id: 3,
-    title: "5 NFL Players In The Race For MVP",
-    publication: "CA Coyle",
-    date: "2014",
-    content: "An analysis of the top 5 NFL punters competing for the unofficial Most Valuable Punter award. The article examines statistics like return yards allowed, punts inside the 20-yard line, net yardage, and total punt distance to determine which punter deserves the title.",
-    category: "Sports Journalism",
-    pdfUrl: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/sign/pdfs/coyle-portfolio/CA%20Coyle%20-%205%20NFL%20Players%20In%20The%20Race%20For%20MVP.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81M2U0NjZkNi1jMDhjLTQzMDEtYjYxMy01OTU4NGMyMGM0NTkiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwZGZzL2NveWxlLXBvcnRmb2xpby9DQSBDb3lsZSAtIDUgTkZMIFBsYXllcnMgSW4gVGhlIFJhY2UgRm9yIE1WUC5wZGYiLCJpYXQiOjE3NTYwOTY2MzUsImV4cCI6MjA3MTQ1NjYzNX0.erbFGoxWhtDiZnEGWUjGJwNnAmCeIzGtF2QZbnQ_jZ4"
-  },
-  {
-    id: 4,
-    title: "5 Pro Athletes Who Share Names With Famous Rockers",
-    publication: "CA Coyle",
-    date: "2024",
-    content: "An exploration of the amusing coincidences where professional athletes share names with famous rock musicians. This piece examines these name doppelgängers and the entertaining possibilities they present for sports and music fans alike.",
-    category: "Sports Journalism",
-    pdfUrl: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/sign/pdfs/coyle-portfolio/CA%20Coyle%20-%205%20Pro%20Athletes%20Who%20Share%20Names%20With%20Famous%20Rockers.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81M2U0NjZkNi1jMDhjLTQzMDEtYjYxMy01OTU4NGMyMGM0NTkiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwZGZzL2NveWxlLXBvcnRmb2xpby9DQSBDb3lsZSAtIDUgUHJvIEF0aGxldGVzIFdobyBTaGFyZSBOYW1lcyBXaXRoIEZhbW91cyBSb2NrZXJzLnBkZiIsImlhdCI6MTc1NjE4NTIxNiwiZXhwIjoyMDcxNTQ1MjE2fQ.sDN7RjzXlaKD9bBEMfoLZo-SAwkQaG0G8-i6eARXv6A"
-  },
-  {
-    id: 5,
-    title: "5 Reasons The Oakland Raiders Should Trade The No. 4 Pick For Tom Brady",
-    publication: "CA Coyle",
-    date: "2015",
-    content: "An analysis of why the Oakland Raiders should consider trading their number four overall pick in the NFL Draft for New England Patriots quarterback Tom Brady. The article explores the potential benefits of bringing the hometown hero and proven winner to Oakland to help revitalize the struggling franchise.",
-    category: "Sports Journalism",
-    pdfUrl: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/sign/pdfs/coyle-portfolio/CA%20Coyle%20-%205%20Reasons%20The%20Oakland%20Raiders%20Should%20Trade%20The%20No.%204%20Pick%20For%20Tom%20Brady.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81M2U0NjZkNi1jMDhjLTQzMDEtYjYxMy01OTU4NGMyMGM0NTkiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwZGZzL2NveWxlLXBvcnRmb2xpby9DQSBDb3lsZSAtIDUgUmVhc29ucyBUaGUgT2FrbGFuZCBSYWlkZXJzIFNob3VsZCBUcmFkZSBUaGUgTm8uIDQgUGljayBGb3IgVG9tIEJyYWR5LnBkZiIsImlhdCI6MTc1NjE4NTQwOSwiZXhwIjoyMDcxNTQ1NDA5fQ.QUd2UGHmVeuf9JTXztl4VBLoU463MD-FQTwHhzrP2Xw"
-  },
-  {
-    id: 6,
-    title: "5 Tweets Proving Russell Wilson Is Even Nicer Than You Think",
-    publication: "CA Coyle",
-    date: "2014",
-    content: "An examination of Russell Wilson's social media presence that demonstrates his exceptional character and humility. The article analyzes five specific tweets that showcase how the Seattle Seahawks quarterback goes above and beyond to show kindness, respect, and genuine care for his fans and community.",
-    category: "Sports Journalism",
-    pdfUrl: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/sign/pdfs/coyle-portfolio/CA%20Coyle%20-%205%20Tweets%20Proving%20Russell%20Wilson%20Is%20Even%20Nicer%20Than%20You%20Think.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81M2U0NjZkNi1jMDhjLTQzMDEtYjYxMy01OTU4NGMyMGM0NTkiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwZGZzL2NveWxlLXBvcnRmb2xpby9DQSBDb3lsZSAtIDUgVHdlZXRzIFByb3ZpbmcgUnVzc2VsbCBXaWxzb24gSXMgRXZlbiBOaWNlciBUaGFuIFlvdSBUaGluay5wZGYiLCJpYXQiOjE3NTYxODU1NTIsImV4cCI6MjA3MTU0NTU1Mn0.B8QL6j8GAfyu6zLE5e7PdqncM_0f6VoyKPeQnVUVpY8"
-  },
-  {
     id: 7,
     title: "The Coup's Boots Riley Talks Funk, Domestic Espionage",
     publication: "CBS Seattle",
@@ -221,7 +167,6 @@ export function Catalog() {
     'coyle-portfolio': true,
   })
   const [expandedSections, setExpandedSections] = useState<{ [key: string]: boolean }>({
-    'sports': true,
     'music': true,
   })
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
@@ -325,7 +270,6 @@ export function Catalog() {
   // Mobile layout
   if (isMobile) {
     // Group articles by category
-    const sportsArticles = portfolioArticles.filter(article => article.category === 'Sports Journalism')
     const musicArticles = portfolioArticles.filter(article => article.category === 'Music Journalism')
 
     return (
@@ -333,35 +277,6 @@ export function Catalog() {
         <div className="mobile-catalog">
           <h1>Catalog</h1>
           
-          {/* Sports Journalism Section */}
-          <div className="article-section">
-            <div 
-              className="section-header"
-              onClick={() => toggleSection('sports')}
-            >
-              <span className="section-expand-icon">
-                {expandedSections['sports'] ? '▼' : '▶'}
-              </span>
-              <h2 className="section-title">Sports Journalism</h2>
-              <span className="section-count">({sportsArticles.length})</span>
-            </div>
-            <div className={`mobile-article-list ${expandedSections['sports'] ? 'expanded' : 'collapsed'}`}>
-              {sportsArticles.map((article) => (
-                <div
-                  key={article.id}
-                  className="mobile-article-item"
-                  onClick={() => openModal(article)}
-                >
-                  <h3>{article.title}</h3>
-                  <p className="article-meta">
-                    {article.publication} • {article.date}
-                  </p>
-                  <p className="article-excerpt">{article.content}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
           {/* Music Journalism Section */}
           <div className="article-section">
             <div 
