@@ -7,6 +7,28 @@ export function OtherWorks() {
         <h1>Other Works</h1>
        
         
+        <section className="work-category">          <h2>ESTRUS Records: Shovelin' The Shit Since '87</h2>
+          <div className="work-items">
+            <div className="work-item estrus-cover">
+            
+            </div>
+            <div className="work-item estrus-mummies"></div>
+            <div className="work-item estrus-jump"></div>
+            <div className="work-item estrus-tim-kerr"></div>
+          </div>
+          <div className="book-link">
+            <p className="book-tagline">Dig In! $40*</p>
+            <a 
+              href="https://www.amazon.com/Estrus-Shovelin-Shit-Since-87/dp/1912740362/ref=tmm_pap_swatch_0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="amazon-link"
+            >
+              BUY online!
+            </a>
+          </div>
+        </section>
+
         <section className="work-category">
           <h2>Musician</h2>
           <div className="work-items">
@@ -27,20 +49,7 @@ export function OtherWorks() {
             </a>
         
           </div>
-        </section>
-
-
-
-        <section className="work-category">
-          <h2>Author</h2>
-          <div className="work-items">
-            <div className="work-item estrus-cover">
-              <h3>Estrus: Shovelin' The Shit Since '87</h3>
-            </div>
-            <div className="work-item estrus-mummies"></div>
-            <div className="work-item estrus-jump"></div>
-            <div className="work-item estrus-tim-kerr"></div>
-          </div>
+          *price may change, this is a link to amazon
         </section>
 
  

@@ -79,23 +79,8 @@ export function SportsParodies() {
         
         <section className="parodies-intro">
           <div className="backstory-section">
-            <h2>The San Diego Incident</h2>
             <p>
-              In the summer of 2013, Chris Coyle found himself embroiled in what locals still refer to as "The Great Gaslamp Quarter Card Caper." 
-              What started as innocent research for a piece on baseball memorabilia quickly spiraled into a web of intrigue involving counterfeit 
-              Tony Gwynn rookie cards, a mysterious figure known only as "The Padre," and an underground network of collectors operating out of 
-              a converted taco truck near Petco Park.
-            </p>
-            <p>
-              The situation escalated when Chris discovered that the "authentic" 1982 Topps cards he'd been investigating were actually part of 
-              a sophisticated counterfeiting operation run by a local cartel that specialized in sports memorabilia. When he tried to expose 
-              the scheme through his journalism, he received a series of threatening messages written on the backs of baseball cards left 
-              in his mailbox.
-            </p>
-            <p>
-              <strong>To protect his identity and continue his work, Chris adopted a series of pseudonyms</strong> - each one carefully crafted 
-              to blend into the San Diego sports scene while maintaining plausible deniability. These aliases allowed him to continue 
-              investigating the underground world of sports memorabilia while staying one step ahead of the cartel's enforcers.
+              <em>Introduction to these articles coming soon.</em>
             </p>
           </div>
         </section>

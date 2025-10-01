@@ -59,6 +59,49 @@
   gap: 2rem;
 }
 
+/* Book Link */
+.book-link {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.book-tagline {
+  font-family: 'Courier', monospace;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff8c00;
+  margin-bottom: 0.5rem;
+}
+
+.book-price {
+  font-family: 'Courier', monospace;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #f5f5dc;
+  margin-bottom: 1rem;
+}
+
+.amazon-link {
+  display: inline-block;
+  background: #ff8c00;
+  color: #000000;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-family: 'Courier', monospace;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid #ff8c00;
+}
+
+.amazon-link:hover {
+  background: transparent;
+  color: #ff8c00;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 140, 0, 0.3);
+}
+
 .work-item {
   background: #1a1a1a;
   padding: 2rem;

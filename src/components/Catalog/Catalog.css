@@ -7,6 +7,16 @@
   box-sizing: border-box;
 }
 
+.catalog-intro {
+  font-family: 'Courier', monospace;
+  font-size: 1.1rem;
+  color: #f5f5dc;
+  text-align: center;
+  margin: 0 auto 1.5rem;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
 /* Directory Layout */
 .directory-layout {
   font-family: 'Roboto', sans-serif;

@@ -276,6 +276,9 @@ export function Catalog() {
       <div className="catalog-page">
         <div className="mobile-catalog">
           <h1>Catalog</h1>
+          <p className="catalog-intro">
+            The following articles have been published by CBS Seattle, KEXP, and other outlets.
+          </p>
           
           {/* Music Journalism Section */}
           <div className="article-section">
@@ -359,6 +362,9 @@ export function Catalog() {
   // Desktop layout
   return (
     <div className="catalog-page">
+      <p className="catalog-intro">
+        The following articles have been published by CBS Seattle, KEXP, and other outlets.
+      </p>
       <div className={`directory-layout ${isDragging ? 'no-select' : ''}`}>
           {/* Left Sidebar - Directory Tree */}
           <div 

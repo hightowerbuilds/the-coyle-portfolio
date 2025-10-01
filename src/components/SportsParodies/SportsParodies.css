@@ -4,6 +4,10 @@
   padding: 2rem 0;
 }
 
+.sports-parodies-page h1 {
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .parodies-intro {
   margin-bottom: 3rem;
 }

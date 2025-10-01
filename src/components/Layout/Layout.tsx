@@ -43,7 +43,7 @@ export function Layout() {
                 alt="Chris Coyle" 
                 className="nav-logo-desktop-image"
               />
-              <strong>Chris Coyle </strong> <em>: Journalist, Author, Musician</em>
+              <strong>Chris Coyle </strong> <em>: Journalist, Musician</em>
             </span>
             <span className="nav-logo-mobile">
               <img 
@@ -61,13 +61,13 @@ export function Layout() {
               Home
             </Link>
             <Link to="/catalog" className="nav-link">
-              Catalog
+            Catalog 
             </Link>
             <Link to="/sports-parodies" className="nav-link">
-              Sports Parodies
+              Sport Parody Page
             </Link>
             <Link to="/other-works" className="nav-link">
-              Other Works
+              Pertinent Works
             </Link>
             <Link to="/contact" className="nav-link">
               Contact
@@ -98,7 +98,7 @@ export function Layout() {
             Sports Parodies
           </Link>
           <Link to="/other-works" className="mobile-nav-link" onClick={closeMobileMenu}>
-            Other Works
+          Pertinent Works
           </Link>
           <Link to="/contact" className="mobile-nav-link" onClick={closeMobileMenu}>
             Contact
