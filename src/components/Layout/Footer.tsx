@@ -22,7 +22,7 @@ export function Footer() {
             </a>
             <span className="separator">•</span>
             <a 
-              href="https://instagram.com/chriscoyle" 
+              href="https://www.instagram.com/chrisalpertco/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="footer-link"

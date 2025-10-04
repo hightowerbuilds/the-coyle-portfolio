@@ -32,7 +32,7 @@ export function Contact() {
               <h3>Connect with me</h3>
               <a href="https://twitter.com/chriscoyle" target="_blank" rel="noopener noreferrer">Twitter</a>
               <a href="https://linkedin.com/in/chriscoyle" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a href="https://instagram.com/chriscoyle" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="https://www.instagram.com/chrisalpertco/" target="_blank" rel="noopener noreferrer">Instagram</a>
             </div>
           </div>
         </div>

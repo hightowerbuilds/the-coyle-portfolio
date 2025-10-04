@@ -18,14 +18,25 @@ export function OtherWorks() {
           </div>
           <div className="book-link">
             <p className="book-tagline">Dig In! $40*</p>
-            <a 
-              href="https://www.amazon.com/Estrus-Shovelin-Shit-Since-87/dp/1912740362/ref=tmm_pap_swatch_0"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="amazon-link"
-            >
-              BUY online!
-            </a>
+            <div className="book-links-container">
+              <a 
+                href="https://www.amazon.com/Estrus-Shovelin-Shit-Since-87/dp/1912740362/ref=tmm_pap_swatch_0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="amazon-link"
+              >
+                BUY online!
+              </a>
+              <a 
+                href="https://www.instagram.com/estrus_records_book/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="instagram-link"
+              >
+                Follow on Instagram
+              </a>
+            </div>
+            <p className="price-disclaimer">*price may change</p>
           </div>
         </section>
 
@@ -49,7 +60,6 @@ export function OtherWorks() {
             </a>
         
           </div>
-          *price may change, this is a link to amazon
         </section>
 
  
