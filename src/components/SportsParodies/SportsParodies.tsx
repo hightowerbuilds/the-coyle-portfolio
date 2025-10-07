@@ -80,7 +80,7 @@ export function SportsParodies() {
         <section className="parodies-intro">
           <div className="backstory-section">
             <p>
-              <em>Introduction to these articles coming soon.</em>
+              <em>Introduction to these articles is on the way.</em>
             </p>
           </div>
         </section>
