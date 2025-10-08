@@ -61,13 +61,13 @@ export function Layout() {
               Home
             </Link>
             <Link to="/catalog" className="nav-link">
-            Catalog 
+            Journalism 
             </Link>
             <Link to="/sports-parodies" className="nav-link">
-              Sport Parody Page
+              Parody
             </Link>
             <Link to="/other-works" className="nav-link">
-              Pertinent Works
+              Other Publications
             </Link>
             <Link to="/contact" className="nav-link">
               Contact
@@ -92,13 +92,13 @@ export function Layout() {
             Home
           </Link>
           <Link to="/catalog" className="mobile-nav-link" onClick={closeMobileMenu}>
-            Catalog
+            Journalism
           </Link>
           <Link to="/sports-parodies" className="mobile-nav-link" onClick={closeMobileMenu}>
-            Sports Parodies
+            Parody
           </Link>
           <Link to="/other-works" className="mobile-nav-link" onClick={closeMobileMenu}>
-          Pertinent Works
+          Other Publications
           </Link>
           <Link to="/contact" className="mobile-nav-link" onClick={closeMobileMenu}>
             Contact
