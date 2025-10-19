@@ -64,8 +64,9 @@ export function Home() {
       <section className="hero">
         <div className="container">
           <div className="hero-content">
-            <h1>Chris Coyle</h1>
-            <h2>Journalist, Author, and Musician</h2>
+            <h1>Chris Alpert Coyle</h1>
+            <h2>Author, Journalist, Musician</h2>
+            <h3>And Foole For Hire</h3>
         
           </div>
         </div>

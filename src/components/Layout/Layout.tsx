@@ -40,18 +40,18 @@ export function Layout() {
             <span className="nav-logo-desktop">
               <img 
                 src={desktopImages[currentImageIndex]} 
-                alt="Chris Coyle" 
+                alt="Chris Alpert Coyle" 
                 className="nav-logo-desktop-image"
               />
-              <strong>Chris Coyle </strong> <em>: Journalist, Musician</em>
+              <strong>Chris Alpert Coyle</strong> <em className="nav-logo-text"> Author, Journalist, Musician & Foole For Hire</em>
             </span>
             <span className="nav-logo-mobile">
               <img 
                 src={desktopImages[currentImageIndex]} 
-                alt="Chris Coyle" 
+                alt="Chris Alpert Coye" 
                 className="nav-logo-mobile-image"
               />
-              <strong>Chris Coyle</strong>
+              <strong>Chris Alpert Coye</strong>
             </span>
           </Link>
           
@@ -61,13 +61,16 @@ export function Layout() {
               Home
             </Link>
             <Link to="/catalog" className="nav-link">
-            Journalism 
+              Selected Press
             </Link>
             <Link to="/sports-parodies" className="nav-link">
-              Parody
+              Clowning CBS
+            </Link>
+            <Link to="/estrus" className="nav-link">
+              Estrus: Shovelin' The Shit
             </Link>
             <Link to="/other-works" className="nav-link">
-              Other Publications
+              Music
             </Link>
             <Link to="/contact" className="nav-link">
               Contact
@@ -92,13 +95,16 @@ export function Layout() {
             Home
           </Link>
           <Link to="/catalog" className="mobile-nav-link" onClick={closeMobileMenu}>
-            Journalism
+            Selected Press
           </Link>
           <Link to="/sports-parodies" className="mobile-nav-link" onClick={closeMobileMenu}>
-            Parody
+            Clowning CBS
+          </Link>
+          <Link to="/estrus" className="mobile-nav-link" onClick={closeMobileMenu}>
+            Estrus: Shovelin' The Shit
           </Link>
           <Link to="/other-works" className="mobile-nav-link" onClick={closeMobileMenu}>
-          Other Publications
+            Music
           </Link>
           <Link to="/contact" className="mobile-nav-link" onClick={closeMobileMenu}>
             Contact

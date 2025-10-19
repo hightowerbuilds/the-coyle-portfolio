@@ -19,14 +19,23 @@
 }
 
 .nav-logo {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 16px;
   color: #f5f5dc !important;
   font-family: 'Courier', monospace;
   display: flex;
   align-items: center;
 }
 
+.nav-logo-text {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: fit-content;
+  font-size: 16px;
+  font-family: monospace;
+
+}
 .nav-logo-desktop {
   display: flex;
   align-items: center;
@@ -54,7 +63,7 @@
 
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .nav-link {

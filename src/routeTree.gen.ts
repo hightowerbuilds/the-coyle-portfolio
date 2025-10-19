@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SportsParodiesRouteImport } from './routes/sports-parodies'
 import { Route as OtherWorksRouteImport } from './routes/other-works'
+import { Route as EstrusRouteImport } from './routes/estrus'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CatalogRouteImport } from './routes/catalog'
 import { Route as IndexRouteImport } from './routes/index'
@@ -23,6 +24,11 @@ const SportsParodiesRoute = SportsParodiesRouteImport.update({
 const OtherWorksRoute = OtherWorksRouteImport.update({
   id: '/other-works',
   path: '/other-works',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EstrusRoute = EstrusRouteImport.update({
+  id: '/estrus',
+  path: '/estrus',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -45,6 +51,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/catalog': typeof CatalogRoute
   '/contact': typeof ContactRoute
+  '/estrus': typeof EstrusRoute
   '/other-works': typeof OtherWorksRoute
   '/sports-parodies': typeof SportsParodiesRoute
 }
@@ -52,6 +59,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/catalog': typeof CatalogRoute
   '/contact': typeof ContactRoute
+  '/estrus': typeof EstrusRoute
   '/other-works': typeof OtherWorksRoute
   '/sports-parodies': typeof SportsParodiesRoute
 }
@@ -60,19 +68,33 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/catalog': typeof CatalogRoute
   '/contact': typeof ContactRoute
+  '/estrus': typeof EstrusRoute
   '/other-works': typeof OtherWorksRoute
   '/sports-parodies': typeof SportsParodiesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/catalog' | '/contact' | '/other-works' | '/sports-parodies'
+  fullPaths:
+    | '/'
+    | '/catalog'
+    | '/contact'
+    | '/estrus'
+    | '/other-works'
+    | '/sports-parodies'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/catalog' | '/contact' | '/other-works' | '/sports-parodies'
+  to:
+    | '/'
+    | '/catalog'
+    | '/contact'
+    | '/estrus'
+    | '/other-works'
+    | '/sports-parodies'
   id:
     | '__root__'
     | '/'
     | '/catalog'
     | '/contact'
+    | '/estrus'
     | '/other-works'
     | '/sports-parodies'
   fileRoutesById: FileRoutesById
@@ -81,6 +103,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CatalogRoute: typeof CatalogRoute
   ContactRoute: typeof ContactRoute
+  EstrusRoute: typeof EstrusRoute
   OtherWorksRoute: typeof OtherWorksRoute
   SportsParodiesRoute: typeof SportsParodiesRoute
 }
@@ -99,6 +122,13 @@ declare module '@tanstack/react-router' {
       path: '/other-works'
       fullPath: '/other-works'
       preLoaderRoute: typeof OtherWorksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/estrus': {
+      id: '/estrus'
+      path: '/estrus'
+      fullPath: '/estrus'
+      preLoaderRoute: typeof EstrusRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -129,6 +159,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CatalogRoute: CatalogRoute,
   ContactRoute: ContactRoute,
+  EstrusRoute: EstrusRoute,
   OtherWorksRoute: OtherWorksRoute,
   SportsParodiesRoute: SportsParodiesRoute,
 }

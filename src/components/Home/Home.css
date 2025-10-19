@@ -15,7 +15,7 @@
   font-weight: bold;
 }
 
-.hero h2 {
+.hero h2, .hero h3 {
   color: rgba(245,245,220,0.9);
   font-size: 1.8rem;
   font-weight: 300;
