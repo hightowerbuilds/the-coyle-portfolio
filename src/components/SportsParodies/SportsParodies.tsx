@@ -75,7 +75,7 @@ export function SportsParodies() {
   return (
     <div className="sports-parodies-page">
       <div className="container">
-        <h1>Clowning CBS: A Sports Parody Installation</h1>
+        <h2>Clowning CBS: A Sports Parody Installation</h2>
         
         <section className="parodies-intro">
           <div className="backstory-section">
