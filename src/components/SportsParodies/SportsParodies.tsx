@@ -75,12 +75,12 @@ export function SportsParodies() {
   return (
     <div className="sports-parodies-page">
       <div className="container">
-        <h1>Sports Parodies</h1>
+        <h1>Clowning CBS: A Sports Parody Installation</h1>
         
         <section className="parodies-intro">
           <div className="backstory-section">
             <p>
-              <em>Introduction to articles</em>
+           The following does not reflect the opinions of CBS however, please be advised that Chris is not a fan of Shohei.
             </p>
           </div>
         </section>

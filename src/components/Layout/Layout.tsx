@@ -51,7 +51,7 @@ export function Layout() {
                 alt="Chris Alpert Coye" 
                 className="nav-logo-mobile-image"
               />
-              <strong>Chris Alpert Coye</strong>
+              <strong>Chris Alpert Coyle</strong>
             </span>
           </Link>
           
