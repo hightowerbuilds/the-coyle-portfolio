@@ -105,12 +105,17 @@ section {
   color: #f5f5dc;
   margin-bottom: 2rem;
   text-align: left;
-  transition: transform 0.8s ease, color 0.8s ease;
+  transition: transform 0.8s ease, color 0.8s ease, background 0.8s ease, backdrop-filter 0.8s ease;
   cursor: pointer;
+  padding: 1rem;
+  border-radius: 12px;
 }
 
 .about h2:hover {
   transform: scale(1.15);
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .about p {
@@ -125,12 +130,17 @@ section {
   font-family: 'Courier New', Courier, monospace;
   font-weight:bold;
   font-size: 24px;
-  transition: transform 0.8s ease;
+  transition: transform 0.8s ease, background 0.8s ease, backdrop-filter 0.8s ease;
   cursor: pointer;
+  padding: 1rem;
+  border-radius: 12px;
 }
 
 .about-text:hover {
   transform: scale(1.1);
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .symbol-transition {
