@@ -7,7 +7,7 @@ export function Contact() {
         <div className="contact-content">
           <div className="contact-image">
             <img 
-              src="https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/chris1.png" 
+              src="https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/chris-pixel.png" 
               alt="Chris Coyle" 
               className="contact-photo"
             />

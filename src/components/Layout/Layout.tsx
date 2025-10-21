@@ -9,8 +9,8 @@ export function Layout() {
   const location = useLocation()
 
   const desktopImages = [
-    'https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/chris1.png',
-    'https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/chris2.png'
+    'https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/chris-look-left.png',
+    'https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/chris-pixel.png'
   ]
 
   // Slideshow effect for desktop images
@@ -43,7 +43,7 @@ export function Layout() {
                 alt="Chris Alpert Coyle" 
                 className="nav-logo-desktop-image"
               />
-              <strong>Chris Alpert Coyle</strong> <em className="nav-logo-text"> Author, Journalist, Musician & Foole For Hire</em>
+              <strong>Chris Alpert Coyle</strong>
             </span>
             <span className="nav-logo-mobile">
               <img 
@@ -70,7 +70,7 @@ export function Layout() {
               Estrus: Shovelin' The Shit
             </Link>
             <Link to="/other-works" className="nav-link">
-              Music
+              Musical Endeavors
             </Link>
             <Link to="/contact" className="nav-link">
               Contact
@@ -104,7 +104,7 @@ export function Layout() {
             Estrus: Shovelin' The Shit
           </Link>
           <Link to="/other-works" className="mobile-nav-link" onClick={closeMobileMenu}>
-            Music
+            Musical Endeavors
           </Link>
           <Link to="/contact" className="mobile-nav-link" onClick={closeMobileMenu}>
             Contact

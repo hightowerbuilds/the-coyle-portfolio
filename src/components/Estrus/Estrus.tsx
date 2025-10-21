@@ -93,7 +93,7 @@ export function Estrus() {
                 Follow on Instagram
               </a>
             </div>
-            <p className="price-disclaimer">*price changes, but it's usually around $40</p>
+            <p className="price-disclaimer">*price varies, but it's usually around $40*</p>
           </div>
         </section>
       </div>

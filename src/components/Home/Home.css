@@ -17,7 +17,7 @@
 
 .hero h2, .hero h3 {
   color: rgba(245,245,220,0.9);
-  font-size: 1.8rem;
+  font-size: 20px;
   font-weight: 300;
   margin-bottom: 1.5rem;
 }
@@ -57,7 +57,7 @@ section {
 }
 
 .about {
-  background: #000000 url('https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/scab-attack.jpg') center center;
+  background: #000000 url('https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/chris-book-reading.png') center center;
   background-size: cover;
   background-repeat: no-repeat;
   border-bottom: 1px solid #333;
@@ -92,6 +92,10 @@ section {
 .about .container {
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: calc(2rem + 40px);
 }
 
 .about h2 {
@@ -100,21 +104,63 @@ section {
   font-size: 2.5rem;
   color: #f5f5dc;
   margin-bottom: 2rem;
-  text-align: center;
+  text-align: left;
+  transition: transform 0.8s ease, color 0.8s ease;
+  cursor: pointer;
+}
+
+.about h2:hover {
+  transform: scale(1.15);
 }
 
 .about p {
   font-size: 1.2rem;
   max-width: 800px;
-  margin: 0 auto 1.5rem;
-  text-align: start;
+  margin: 0 0 1.5rem 0;
+  text-align: left;
   color: #f5f5dc;
 }
 
 .about-text {
   font-family: 'Courier New', Courier, monospace;
   font-weight:bold;
-  font-size: 24px
+  font-size: 24px;
+  transition: transform 0.8s ease;
+  cursor: pointer;
+}
+
+.about-text:hover {
+  transform: scale(1.1);
+}
+
+.symbol-transition {
+  display: inline-block;
+  position: relative;
+  width: 1ch;
+  transition: transform 0.8s ease;
+}
+
+.symbol-transition::before {
+  content: '+';
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+.symbol-transition::after {
+  content: '>';
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.about-text:hover .symbol-transition::before {
+  opacity: 0;
+}
+
+.about-text:hover .symbol-transition::after {
+  opacity: 1;
 }
 
 .services {

@@ -65,18 +65,16 @@ export function Home() {
         <div className="container">
           <div className="hero-content">
             <h1>Chris Alpert Coyle</h1>
-            <h2>Author, Journalist, Musician</h2>
-            <h3>And Foole For Hire</h3>
-        
+            <h2>Author, Journalist, Musician  <h3>And Foole For Hire</h3></h2>
           </div>
         </div>
       </section>
 
       <section className="about">
         <div className="container">
-          <h2 className="about-title">THE WORLD IS YOUR AIOLI!</h2>
+          <h2 className="about-title">AGING HIPSTER SEEKS YOUR ATTENTION!</h2>
           <p className="about-text">
-           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, earum eum laudantium dolorum ipsam similique eius perspiciatis ipsum culpa, unde odit ducimus velit. Delectus sunt sequi quaerat porro autem eius. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, earum eum laudantium dolorum ipsam similique eius perspiciatis 
+            <span className="symbol-transition"></span>  Hello, my name is Chris. I just celebrated the fourth decade of my life this September. For the fifth, I am putting all of my skills together to create something unique FOR YOU! I've completed projects large and smaller and have worked with superb artists, photographers, and editors. Take a look at some of my work, and <a href="/contact" className="contact-link">GET IN TOUCH</a>  if you're interested!
           </p>
         
         </div>
