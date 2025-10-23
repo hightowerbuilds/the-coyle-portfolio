@@ -2,40 +2,36 @@ import { useState } from 'react'
 import './Estrus.css'
 
 export function Estrus() {
-  const [activeItem, setActiveItem] = useState<number>(0)
+  const [expandedPage, setExpandedPage] = useState<number | null>(null)
 
-  const handleAccordionHover = (index: number) => {
-    setActiveItem(index)
+  const togglePage = (index: number) => {
+    setExpandedPage(expandedPage === index ? null : index)
   }
 
-  const handleAccordionLeave = () => {
-    setActiveItem(0) // Return to first item when leaving accordion
-  }
-
-  const estrusItems = [
+  const bookPages = [
     {
       id: 0,
-      image: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/estrus-shovelin-shit-cover.jpg",
-      title: "Book Cover",
-      description: "A comprehensive history of ESTRUS Records, the legendary garage rock label that helped define the Pacific Northwest sound from 1987 onwards."
+      pdf: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/estrus_book_first_page.pdf",
+      thumbnail: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/estrus_book_first_page.pdf",
+      title: "Page 1"
     },
     {
       id: 1,
-      image: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/the-mummies-article.png",
-      title: "The Mummies",
-      description: "Inside look at The Mummies and their influence on the garage rock revival, featuring exclusive interviews and rare photos."
+      pdf: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/estrus_book_second_page.pdf",
+      thumbnail: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/estrus_book_second_page.pdf",
+      title: "Page 2"
     },
     {
       id: 2,
-      image: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/estrus-jump-page.jpg",
-      title: "Inside Pages",
-      description: "Deep dive into the label's history with stories from bands, producers, and the Seattle music scene that shaped garage rock."
+      pdf: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/estrus_book_page_three.pdf",
+      thumbnail: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/estrus_book_page_three.pdf",
+      title: "Page 3"
     },
     {
       id: 3,
-      image: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/tim-kerr-estrus-book.jpg",
-      title: "Tim Kerr Feature",
-      description: "Exclusive feature on Tim Kerr and his contributions to the label's iconic visual identity and punk rock aesthetic."
+      pdf: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/estrus_book_page_four.pdf",
+      thumbnail: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/estrus_book_page_four.pdf",
+      title: "Page 4"
     }
   ]
 
@@ -44,29 +40,36 @@ export function Estrus() {
       <div className="container">
         <h1>ESTRUS Records: Shovelin' The Shit Since '87</h1>
        
+        <p className="estrus-excerpt-intro">
+          The following is an excerpt from the Estrus Records book by Chris Coyle. Click on each page to expand and read.
+        </p>
         
         <section className="work-category">
-          <div 
-            className="estrus-accordion"
-            onMouseLeave={handleAccordionLeave}
-          >
-            {estrusItems.map((item) => (
-              <div 
-                key={item.id}
-                className={`estrus-accordion-item ${activeItem === item.id ? 'active' : ''}`}
-                onMouseEnter={() => handleAccordionHover(item.id)}
-              >
-                <div className="estrus-accordion-header">
-                  <img 
-                    src={item.image} 
-                    alt={item.title} 
-                    className="estrus-accordion-image"
-                  />
-                  <h3>{item.title}</h3>
-                </div>
-                <div className="estrus-accordion-content">
-                  <h4>{item.title}</h4>
-                  <p>{item.description}</p>
+          <div className="book-pages-accordion">
+            {bookPages.map((page, index) => (
+              <div key={page.id} className={`book-accordion-item ${expandedPage === index ? 'expanded' : ''}`}>
+                <button 
+                  className="book-accordion-header-with-thumb"
+                  onClick={() => togglePage(index)}
+                >
+                  <div className="thumbnail-container">
+                    <embed 
+                      src={page.thumbnail} 
+                      type="application/pdf"
+                      className="page-thumbnail"
+                    />
+                  </div>
+                  <span className="book-page-title">{page.title}</span>
+                  <span className="accordion-icon">{expandedPage === index ? '−' : '+'}</span>
+                </button>
+                <div className="book-accordion-content">
+                  <div className="book-page-wrapper">
+                    <embed 
+                      src={page.pdf} 
+                      type="application/pdf"
+                      className="book-page-pdf"
+                    />
+                  </div>
                 </div>
               </div>
             ))}
