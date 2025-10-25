@@ -14,14 +14,6 @@
   font-weight: bold;
 }
 
-.contact-intro {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto 4rem;
-  font-size: 1.2rem;
-  color: #f5f5dc;
-}
-
 .contact-page::before {
   content: '';
   position: absolute;
@@ -123,63 +115,6 @@
 .social-links a:hover {
   background: #333;
   color: #d4d4aa !important;
-}
-
-.contact-form {
-  background: #1a1a1a;
-  padding: 2rem;
-  border-radius: 10px;
-  border: 1px solid #333;
-}
-
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-  color: #f5f5dc;
-  font-weight: 500;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 1rem;
-  border: 2px solid #333;
-  border-radius: 8px;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
-  background: #000000;
-  color: #f5f5dc;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: #f5f5dc;
-}
-
-.submit-btn {
-  background: #000000;
-  color: #f5f5dc;
-  padding: 1rem 2rem;
-  border: 2px solid #f5f5dc;
-  border-radius: 50px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  width: 100%;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-.submit-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(245,245,220, 0.3);
-  background: #333;
 }
 
 /* Responsive Design */

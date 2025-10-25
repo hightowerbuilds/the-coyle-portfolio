@@ -64,11 +64,6 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.directory-header .folder-icon {
-  margin-right: 0.5rem;
-  font-family: 'Roboto', sans-serif;
-}
-
 .directory-tree {
   padding: 0.5rem 0;
   font-family: 'Roboto', sans-serif;
@@ -106,10 +101,6 @@
   margin-right: 0.5rem;
   font-size: 0.7rem;
   color: #999;
-}
-
-.folder-icon {
-  margin-right: 0.5rem;
 }
 
 .folder-name {
@@ -166,11 +157,6 @@
   background: #8B4513;
 }
 
-.file-icon {
-  margin-right: 0.5rem;
-  font-size: 0.7rem;
-}
-
 .file-name {
   white-space: nowrap;
   overflow: hidden;
@@ -223,59 +209,11 @@
   border-left: 1px solid #8B4513;
 }
 
-.article-header {
-  background: #242424;
-  color: #f5f5dc;
-  padding: 1rem 2rem;
-  border-bottom: 1px solid #8B4513;
-  font-family: 'PT Mono', monospace;
-}
-
-.file-path {
-  display: flex;
-  align-items: center;
-  font-size: 0.85rem;
-  margin-bottom: 0.5rem;
-  color: #999;
-}
-
-.path-segment {
-  color: #f5f5dc;
-}
-
-.path-segment.active-file {
-  color: #f5f5dc;
-  font-weight: 600;
-}
-
-.path-separator {
-  margin: 0 0.3rem;
-  color: #666;
-}
-
 .article-meta {
   display: flex;
   gap: 2rem;
   font-size: 0.8rem;
   opacity: 0.8;
-}
-
-.article-category {
-  background: #14a085;
-  color: #f5f5dc;
-  padding: 0.2rem 0.6rem;
-  border-radius: 12px;
-  font-size: 0.7rem;
-  font-weight: 600;
-}
-
-.publication {
-  font-weight: 600;
-  color: #f5f5dc;
-}
-
-.date {
-  color: #666;
 }
 
 .article-content {
@@ -300,17 +238,6 @@
 
 .article-content h1.music-title {
   font-family: 'Trade Winds', cursive;
-}
-
-.excerpt {
-  font-size: 1.1rem;
-  font-style: italic;
-  color: #d4d4aa;
-  margin-bottom: 2rem;
-  padding: 1rem;
-  background: #1a1a1a;
-  border-left: 4px solid #8B4513;
-  border-radius: 0 4px 4px 0;
 }
 
 .article-body {
@@ -407,10 +334,6 @@
   .article-content h1 {
     font-size: 1.5rem;
     font-family: 'PT Mono', monospace;
-  }
-  
-  .file-path {
-    font-size: 0.75rem;
   }
   
   .article-meta {

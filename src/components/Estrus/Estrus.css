@@ -21,100 +21,6 @@
   text-align: center;
 }
 
-/* Work Categories */
-.work-category {
-  margin-bottom: 4rem;
-  border-bottom: 1px solid #333;
-  padding-bottom: 3rem;
-}
-
-.work-category:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.work-category h2 {
-  font-family: 'Courier', monospace;
-  font-weight: bold;
-  font-size: 2rem;
-  color: #f5f5dc;
-  margin-bottom: 2rem;
-  border-left: 4px solid #8ab4f8;
-  padding-left: 1rem;
-}
-
-/* Book Link */
-.book-link {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.book-tagline {
-  font-family: 'Courier', monospace;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #ff8c00;
-  margin-bottom: 1rem;
-}
-
-.book-links-container {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.amazon-link {
-  display: inline-block;
-  background: #ff8c00;
-  color: #000000;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  font-family: 'Courier', monospace;
-  font-weight: bold;
-  font-size: 1.1rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border: 2px solid #ff8c00;
-}
-
-.amazon-link:hover {
-  background: transparent;
-  color: #ff8c00;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(255, 140, 0, 0.3);
-}
-
-.instagram-link {
-  display: inline-block;
-  background: transparent;
-  color: #f5f5dc;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  font-family: 'Courier', monospace;
-  font-weight: bold;
-  font-size: 1.1rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border: 2px solid #f5f5dc;
-}
-
-.instagram-link:hover {
-  background: #f5f5dc;
-  color: #000000;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(245, 245, 220, 0.3);
-}
-
-.price-disclaimer {
-  font-family: 'Courier', monospace;
-  font-size: 0.9rem;
-  color: #d4d4aa;
-  margin-top: 1rem;
-  font-style: italic;
-}
-
 /* Estrus Excerpt Intro */
 .estrus-excerpt-intro {
   font-family: 'Courier New', Courier, monospace;
@@ -461,15 +367,6 @@
 
   .estrus-page h1 {
     font-size: 2.5rem;
-  }
-
-  .work-category h2 {
-    font-size: 1.6rem;
-  }
-
-  .work-category {
-    margin-bottom: 3rem;
-    padding-bottom: 2rem;
   }
 
   .estrus-excerpt-intro {
