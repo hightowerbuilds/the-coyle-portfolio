@@ -6,30 +6,13 @@ export function Footer() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-left">
-            <span>&copy; 2025 Chris Coyle</span>
+            <span>&copy; 2025 Chris Alpert Coyle</span>
             <span className="separator">•</span>
-            <a href="mailto:chris@chriscoyle.com" className="footer-link">chris@chriscoyle.com</a>
+            <a href="mailto:chris@alpertcoyle.com" className="footer-link">chris@alpertcoyle.com</a>
           </div>
           
           <div className="footer-right">
-            <a 
-              href="https://twitter.com/chriscoyle" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="footer-link"
-            >
-              Twitter
-            </a>
-            <span className="separator">•</span>
-            <a 
-              href="https://www.instagram.com/chrisalpertco/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="footer-link"
-            >
-              Instagram
-            </a>
-            <span className="separator">•</span>
+          <span>website by </span>
             <a 
               href="https://hightowerbuilds.com" 
               target="_blank" 

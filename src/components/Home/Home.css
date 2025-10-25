@@ -369,17 +369,111 @@ section {
   text-align: center;
 }
 
+/* Toggle Pages Button */
+.toggle-pages-button {
+  display: block;
+  margin: 3rem auto 2rem auto;
+  background: #ff8c00;
+  color: #000000;
+  padding: 1.25rem 2.5rem;
+  border-radius: 8px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 3px solid #ff8c00;
+  box-shadow: 0 4px 12px rgba(255, 140, 0, 0.4);
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.toggle-pages-button:hover {
+  background: transparent;
+  color: #ff8c00;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(255, 140, 0, 0.6);
+}
+
 /* Book Pages Accordion */
 .book-pages-accordion {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin-top: 3rem;
   position: relative;
   z-index: 2;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 3rem;
+  transition: all 0.6s ease;
+}
+
+/* Closed state - stacked */
+.book-pages-accordion.closed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.book-pages-accordion.closed .book-accordion-item {
+  position: absolute;
+  width: 300px;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.book-pages-accordion.closed .book-accordion-item[data-index="0"] {
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+}
+
+.book-pages-accordion.closed .book-accordion-item[data-index="1"] {
+  left: 50%;
+  transform: translateX(calc(-50% - 80px));
+  z-index: 3;
+}
+
+.book-pages-accordion.closed .book-accordion-item[data-index="2"] {
+  left: 50%;
+  transform: translateX(calc(-50% - 160px));
+  z-index: 2;
+}
+
+.book-pages-accordion.closed .book-accordion-item[data-index="3"] {
+  left: 50%;
+  transform: translateX(calc(-50% - 240px));
+  z-index: 1;
+}
+
+.book-pages-accordion.closed .book-accordion-item[data-index="0"]:hover {
+  transform: translateX(-50%) translateY(-10px);
+  z-index: 10;
+}
+
+.book-pages-accordion.closed .book-accordion-item[data-index="1"]:hover {
+  transform: translateX(calc(-50% - 80px)) translateY(-10px);
+  z-index: 10;
+}
+
+.book-pages-accordion.closed .book-accordion-item[data-index="2"]:hover {
+  transform: translateX(calc(-50% - 160px)) translateY(-10px);
+  z-index: 10;
+}
+
+.book-pages-accordion.closed .book-accordion-item[data-index="3"]:hover {
+  transform: translateX(calc(-50% - 240px)) translateY(-10px);
+  z-index: 10;
+}
+
+/* Open state - grid */
+.book-pages-accordion.open {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  height: auto;
 }
 
 .book-accordion-item {
@@ -637,9 +731,34 @@ section {
     font-size: 0.85rem;
   }
 
-  .book-pages-accordion {
+  .toggle-pages-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+
+  .book-pages-accordion.open {
     gap: 1.5rem;
     padding: 0 1rem;
+  }
+
+  .book-pages-accordion.closed {
+    height: 350px;
+  }
+
+  .book-pages-accordion.closed .book-accordion-item {
+    width: 250px;
+  }
+
+  .book-pages-accordion.closed .book-accordion-item[data-index="1"] {
+    right: 60px;
+  }
+
+  .book-pages-accordion.closed .book-accordion-item[data-index="2"] {
+    right: 120px;
+  }
+
+  .book-pages-accordion.closed .book-accordion-item[data-index="3"] {
+    right: 180px;
   }
 
   .book-page-thumbnail {
@@ -718,9 +837,34 @@ section {
     font-size: 0.75rem;
   }
 
-  .book-pages-accordion {
+  .toggle-pages-button {
+    padding: 0.9rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .book-pages-accordion.open {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+
+  .book-pages-accordion.closed {
+    height: 300px;
+  }
+
+  .book-pages-accordion.closed .book-accordion-item {
+    width: 200px;
+  }
+
+  .book-pages-accordion.closed .book-accordion-item[data-index="1"] {
+    right: 50px;
+  }
+
+  .book-pages-accordion.closed .book-accordion-item[data-index="2"] {
+    right: 100px;
+  }
+
+  .book-pages-accordion.closed .book-accordion-item[data-index="3"] {
+    right: 150px;
   }
 
   .book-page-thumbnail {

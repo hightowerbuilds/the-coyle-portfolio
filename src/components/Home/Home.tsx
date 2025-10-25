@@ -3,6 +3,7 @@ import './Home.css'
 
 export function Home() {
   const [selectedPage, setSelectedPage] = useState<number | null>(null)
+  const [isPagesOpen, setIsPagesOpen] = useState(false)
 
   const openModal = (index: number) => {
     setSelectedPage(index)
@@ -10,6 +11,10 @@ export function Home() {
 
   const closeModal = () => {
     setSelectedPage(null)
+  }
+
+  const togglePages = () => {
+    setIsPagesOpen(!isPagesOpen)
   }
 
   const goToPreviousPage = () => {
@@ -74,7 +79,7 @@ export function Home() {
 
       <section className="services">
         <div className="container">
-          <h2 className="services-title">Estrus Records Book</h2>
+          <h2 className="services-title">Author of ESTRUS: Shovelin' The Shit Since '87 <h2  className="services-title">(An Estrus Records Biography)</h2></h2>
           
           <p className="book-excerpt-intro">
             The following is an excerpt from the Estrus Records book by Chris Coyle. Click on each page to view.
@@ -113,9 +118,13 @@ export function Home() {
             </div>
           </div>
           
-          <div className="book-pages-accordion">
+          <button className="toggle-pages-button" onClick={togglePages}>
+            {isPagesOpen ? 'Close Preview' : 'Open Preview!'}
+          </button>
+
+          <div className={`book-pages-accordion ${isPagesOpen ? 'open' : 'closed'}`}>
             {bookPages.map((page, index) => (
-              <div key={page.id} className="book-accordion-item">
+              <div key={page.id} className="book-accordion-item" data-index={index}>
                 <button 
                   className="book-accordion-header"
                   onClick={() => openModal(index)}
