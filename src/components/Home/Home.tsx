@@ -2,32 +2,52 @@ import { useState } from 'react'
 import './Home.css'
 
 export function Home() {
-  const [expandedPage, setExpandedPage] = useState<number | null>(null)
+  const [selectedPage, setSelectedPage] = useState<number | null>(null)
 
-  const togglePage = (index: number) => {
-    setExpandedPage(expandedPage === index ? null : index)
+  const openModal = (index: number) => {
+    setSelectedPage(index)
+  }
+
+  const closeModal = () => {
+    setSelectedPage(null)
+  }
+
+  const goToPreviousPage = () => {
+    if (selectedPage !== null && selectedPage > 0) {
+      setSelectedPage(selectedPage - 1)
+    }
+  }
+
+  const goToNextPage = () => {
+    if (selectedPage !== null && selectedPage < bookPages.length - 1) {
+      setSelectedPage(selectedPage + 1)
+    }
   }
 
   const bookPages = [
     {
       id: 0,
       image: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/estrus_book_first_page.pdf",
-      title: "Page 1"
+      thumbnail: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/estrus_book_first_page.jpg",
+      title: "Preview 1"
     },
     {
       id: 1,
       image: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/estrus_book_second_page.pdf",
-      title: "Page 2"
+      thumbnail: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/estrus_book_second_page.jpg",
+      title: "Preview 2"
     },
     {
       id: 2,
       image: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/estrus_book_page_three.pdf",
-      title: "Page 3"
+      thumbnail: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/estrus_book_page_three.jpg",
+      title: "Preview 3"
     },
     {
       id: 3,
       image: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/estrus_book_page_four.pdf",
-      title: "Page 4"
+      thumbnail: "https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/estrus_book_page_four.jpg",
+      title: "Preview 4"
     }
   ]
 
@@ -57,37 +77,59 @@ export function Home() {
           <h2 className="services-title">Estrus Records Book</h2>
           
           <p className="book-excerpt-intro">
-            The following is an excerpt from the Estrus Records book by Chris Coyle. Click on each page to expand and read.
+            The following is an excerpt from the Estrus Records book by Chris Coyle. Click on each page to view.
           </p>
           
           <div className="book-pages-accordion">
             {bookPages.map((page, index) => (
-              <div key={page.id} className={`book-accordion-item ${expandedPage === index ? 'expanded' : ''}`}>
+              <div key={page.id} className="book-accordion-item">
                 <button 
                   className="book-accordion-header"
-                  onClick={() => togglePage(index)}
+                  onClick={() => openModal(index)}
                 >
-                  <span className="book-page-title">{page.title}</span>
-                  <span className="accordion-icon">{expandedPage === index ? '−' : '+'}</span>
+                  <img 
+                    src={page.thumbnail} 
+                    alt={page.title}
+                    className="book-page-thumbnail"
+                  />
+                  <span className="book-page-label">{page.title}</span>
                 </button>
-                <div className="book-accordion-content">
-                  <div className="book-page-wrapper">
-                    <embed 
-                      src={page.image} 
-                      type="application/pdf"
-                      className="book-page-pdf"
-                    />
-                  </div>
-                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
- 
-
-  
+      {selectedPage !== null && (
+        <div className="book-modal-overlay" onClick={closeModal}>
+          <div className="book-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="book-modal-close" onClick={closeModal}>×</button>
+            
+            {selectedPage > 0 && (
+              <button className="book-modal-nav book-modal-nav-prev" onClick={goToPreviousPage}>
+                ‹
+              </button>
+            )}
+            
+            {selectedPage < bookPages.length - 1 && (
+              <button className="book-modal-nav book-modal-nav-next" onClick={goToNextPage}>
+                ›
+              </button>
+            )}
+            
+            <div className="book-modal-header">
+              <h3>{bookPages[selectedPage].title}</h3>
+            </div>
+            <div className="book-modal-body">
+              <embed 
+                src={bookPages[selectedPage].image} 
+                type="application/pdf"
+                className="book-modal-pdf"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
