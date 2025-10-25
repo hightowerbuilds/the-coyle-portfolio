@@ -79,6 +79,39 @@ export function Home() {
           <p className="book-excerpt-intro">
             The following is an excerpt from the Estrus Records book by Chris Coyle. Click on each page to view.
           </p>
+
+          <div className="book-cover-section">
+            <div className="book-cover-image-wrapper">
+              <img 
+                src="https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/estrus-shovelin-shit-cover.jpg"
+                alt="Estrus Records - Shovelin' Shit Cover"
+                className="book-cover-image"
+              />
+            </div>
+            <div className="book-purchase-info">
+              <a 
+                href="https://www.amazon.com/Estrus-Shovelin-Shit-Since-87/dp/1912740362/ref=tmm_pap_swatch_0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="read-this-book-link"
+              >
+                <img 
+                  src="https://gbnizxzurmbzeelacztr.supabase.co/storage/v1/object/public/images/coyle-portfolio/read-this-book.png"
+                  alt="Read This Book"
+                  className="read-this-book-image"
+                />
+              </a>
+              <a 
+                href="https://www.amazon.com/Estrus-Shovelin-Shit-Since-87/dp/1912740362/ref=tmm_pap_swatch_0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="amazon-buy-button"
+              >
+                KICK ASS BOOK! only $40*
+              </a>
+              <p className="price-disclaimer">*price varies, but it's usually around $40*</p>
+            </div>
+          </div>
           
           <div className="book-pages-accordion">
             {bookPages.map((page, index) => (
